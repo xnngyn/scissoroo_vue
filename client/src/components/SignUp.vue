@@ -1,7 +1,9 @@
 <template>
   <div>
+    <!-- Link trigger modal -->
     <a href="#" data-toggle="modal" data-target="#registrieren">Registrierungs-Formular öffnen</a>
 
+    <!-- Modal -->
     <div
       class="modal fade"
       id="registrieren"
