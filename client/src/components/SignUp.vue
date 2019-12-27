@@ -174,7 +174,7 @@
                       <div class="col-12">
                         <button type="submit" class="btn btn-primary btn-block">Registrieren</button>
                         <br />
-                        <h6>By pressing Sign Up you agree with the Terms of Services and Privacy Policy</h6>
+                        <h6>Durch die Registrierung stimmst du den Nutzungsbestimmungen und der Datenschutzerklärung zu.</h6>
                       </div>
                     </form>
                   </section>
@@ -183,7 +183,7 @@
             </div>
           </div>
           <div class="modal-footer justify-content-center">
-            <a href="signin">Already have an account?</a>
+            <a href="signin">Du hast dich bereits registriert?</a>
           </div>
         </div>
       </div>
@@ -196,4 +196,5 @@ export default {};
 </script>
 
 <style>
+
 </style>
