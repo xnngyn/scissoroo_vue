@@ -1,3 +1,4 @@
+<!-- Diese Komponente ist momentan überflüssig, da sie bereits in HomeNichtEingeloggt integriert wurde -->
 <template>
   <div>
     <!-- Link trigger modal -->
