@@ -2,10 +2,10 @@
   <div id="buttons">
     
     <!-- Button trigger modal -->
-    <button class="btn btn-secondary mr-sm-2" data-toggle="modal" data-target="#registrieren">Registrierung</button>
+    <button id="btnSignUp" class="btn btn-secondary mr-sm-2" data-toggle="modal" data-target="#registrieren">Registrierung</button>
     
     <!--  <button class="btn btn-secondary mr-sm-2" @click="setSignUp">Registrierung</button> -->
-    <button class="btn btn-secondary" @click="setSignIn">Anmelden</button>
+    <button id="btnSignIn" class="btn btn-secondary" @click="setSignIn">Anmelden</button>
     <button class="btn btn-secondary" @click="setResults">Results</button>
 
     <component v-bind:is="$store.getters.componentState"></component>
@@ -183,7 +183,7 @@
             </div>
           </div>
           <div class="modal-footer justify-content-center">
-            <a href="signin">Du hast dich bereits registriert?</a>
+            <a href="" @click="setSignIn" data-dismiss="modal">Du hast dich bereits registriert?</a>
           </div>
         </div>
       </div>
@@ -202,7 +202,7 @@ export default {
   components: {
     HomeText: HomeText,
     SignIn: SignIn,
-    //    SignUp: SignUp,
+    SignUp: SignUp,
     MyProfile: MyProfile,
     Results: Results
   },
@@ -216,11 +216,21 @@ export default {
     //   setSignUp: function() {
     //     this.$store.state.componentState = "SignUp";
     //   },
+
     setSignIn: function() {
       this.$store.state.componentState = "SignIn";
+      
+      document.getElementById("btnSignIn").disabled = true; //Setzt den Anmelden-Button inaktiv, da die Komponente bereits geladen wurde
+      //document.getElementById("btnSignIn").pressed = false;     not working :-(
     },
+
     setResults: function() {
       this.$store.state.componentState = "Results";
+
+      //Reaktivierung des Anmelden-Buttons
+      if(document.getElementById("btnSignIn").disabled == true){
+        document.getElementById("btnSignIn").disabled = false;
+      }
     },
 
     checkForm: function() {

@@ -2,7 +2,7 @@
 <template>
   <div>
     <!-- Link trigger modal -->
-    <a href="#" data-toggle="modal" data-target="#registrieren">Registrierungs-Formular öffnen</a>
+    <a href="#" data-toggle="modal" data-target="#registrieren">Registrierungs-Formular öffnen</a> 
 
     <!-- Modal -->
     <div

@@ -42,6 +42,11 @@ export default {
     setHomeText: function() {
 
       this.$store.state.componentState = 'HomeText';
+
+      //Reaktivierung des Anmelden-Buttons
+      if(document.getElementById("btnSignIn").disabled == true){
+        document.getElementById("btnSignIn").disabled = false;
+      }
     }
     
       
