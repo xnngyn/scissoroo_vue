@@ -27,9 +27,13 @@ export default {
         return {
 
             friseurs: [
-{name: 'Asiafriseur', adresse: 'AAASIEEEN'},
-{name: 'Ostfriseur', adresse: 'slaveländle'}
+{id:1, name: 'Asiafriseur', adresse: 'AAASIEEEN', email: 'asd', telefon: '0711/321654987', website: 'asd', parkplaetze: 2, montag: '10-12', dienstag: '', mittwoch: '', donnerstag: '', freitag: '', samstag: '', sonntag: ''},
+{id:2, name: 'Ostfriseur', adresse: 'slaveländle', email: 'asd', telefon: '0711/321654987', website: 'asd', parkplaetze: 2, montag: '10-12', dienstag: '', mittwoch: '', donnerstag: '', freitag: '', samstag: '', sonntag: ''}
 
+
+            
+
+ 
             ]
 
         }
