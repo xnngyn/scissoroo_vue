@@ -1,15 +1,10 @@
 <template>
-    <div id="Buttons">
+    <div id="eingeloggt">
 
 
 <h1> EINGELOGGT! </h1>
-        <button>Mein Profil</button> 
-        <button>Ausloggen</button>
-
-        
-
-
-        
+     
+        <component v-bind:is="ladeKomponente"></component>
         
 
     </div>
@@ -18,19 +13,21 @@
 
 <script>
 
+import Suchfeld from "./Suchfeld";
 
 
 
 export default {
 
     components: {
-       
+       Suchfeld: Suchfeld
         
     },
-    name: 'buttons',
+    name: 'eingeloggt',
     data () {
         return {
-            
+
+            ladeKomponente: 'Suchfeld'
             
    
     }
