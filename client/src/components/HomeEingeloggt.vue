@@ -3,8 +3,11 @@
 
 
 <h1> EINGELOGGT! </h1>
-     
+
+        <button @click="setResults">RESULTATE</button>
+    
         <component v-bind:is="ladeKomponente"></component>
+         
         
 
     </div>
@@ -21,18 +24,26 @@ import Results from "./Results";
 export default {
 
     components: {
-       Suchfeld: Suchfeld,
-       Results: Results
+       'Suchfeld': Suchfeld,
+       'Results': Results
         
     },
     name: 'eingeloggt',
     data () {
         return {
 
-            ladeKomponente: 'Suchfeld'
+          ladeKomponente: 'Suchfeld',
+         
             
    
     }
+  },
+  methods: {
+
+      setResults: function() {
+          this.ladeKomponente = 'Results'
+      }
+
   }
 }
 </script>
