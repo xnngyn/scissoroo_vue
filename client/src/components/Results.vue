@@ -4,12 +4,36 @@
 
 
 
+
+<FriseurAnzeige v-bind:friseurs="friseurs"></FriseurAnzeige>
+
 </div>
 
 </template>
 
 <script>
+
+import FriseurAnzeige from "./FriseurAnzeige";
+
 export default {
+
+   components: {
+
+       'FriseurAnzeige': FriseurAnzeige
+
+   },
+     
+    data() {
+        return {
+
+            friseurs: [
+{name: 'Asiafriseur', adresse: 'AAASIEEEN'},
+{name: 'Ostfriseur', adresse: 'slaveländle'}
+
+            ]
+
+        }
+    }
     
 }
 </script>

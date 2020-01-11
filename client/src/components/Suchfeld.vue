@@ -28,12 +28,7 @@
 
 export default {
 
-    components: {
-
-        
-       
-        
-    },
+    
     name: 'suchfeld',
     data () {
         return {

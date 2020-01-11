@@ -200,11 +200,11 @@ import Results from "./Results";
 
 export default {
   components: {
-    HomeText: HomeText,
-    SignIn: SignIn,
-    SignUp: SignUp,
-    MyProfile: MyProfile,
-    Results: Results
+    'HomeText': HomeText,
+    'SignIn': SignIn,
+    'SignUp': SignUp,
+    'MyProfile': MyProfile,
+    'Results': Results
   },
   name: "buttons",
   data() {
