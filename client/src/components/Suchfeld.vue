@@ -4,7 +4,7 @@
 
 <h1> SUCHFELD! </h1>
 
-<button @click="setResults">Results</button>
+
      
 <!-- Load icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -46,10 +46,11 @@ export default {
 
   methods: {
    
-
-    setResult: function() {
-      this.$HomeEingeloggt.data.ladeKomponente = "Results";
-    },
+      setResults: function() {
+          
+          this.$store.state.componentStateEingeloggt = 'Results'
+      }
+    
    
 
   }

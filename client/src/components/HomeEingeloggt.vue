@@ -4,9 +4,9 @@
 
 <h1> EINGELOGGT! </h1>
 
-        <button @click="setResults">RESULTATE</button>
+       
     
-        <component v-bind:is="ladeKomponente"></component>
+        <component v-bind:is="$store.getters.componentStateEingeloggt"></component>
          
         
 
@@ -41,7 +41,7 @@ export default {
   methods: {
 
       setResults: function() {
-          this.ladeKomponente = 'Results'
+          this.$store.state.componentStateEingeloggt = 'Results'
       }
 
   }

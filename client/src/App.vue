@@ -5,7 +5,7 @@
     
 
     <nav class="navbar navbar-light bg-light">
-		  <a class="navbar-brand"><div @click="setHomeText"><img src="https://raw.githubusercontent.com/xnngyn/Scissoroo/master/public/images/Scissoroo_Logo.jpg" width="100" height="100" alt=""> </div></a> <!--../Bilder/Scissoroo_Logo.jpg-->
+		  <a class="navbar-brand"><div @click="setSuchfeld(); setHomeText();"><img src="https://raw.githubusercontent.com/xnngyn/Scissoroo/master/public/images/Scissoroo_Logo.jpg" width="100" height="100" alt=""> </div></a> <!--../Bilder/Scissoroo_Logo.jpg-->
 			<form class="form-inline">
 			</form>
       <HomeNichtEingeloggt v-if="!eingeloggt"></HomeNichtEingeloggt>
@@ -32,7 +32,7 @@ export default {
   data () {
     return {
 
-      eingeloggt:false
+      eingeloggt:true
       
     }
   },
@@ -47,6 +47,12 @@ export default {
       if(document.getElementById("btnSignIn").disabled == true){
         document.getElementById("btnSignIn").disabled = false;
       }
+    },
+
+    setSuchfeld: function(){
+  
+      this.$store.state.componentStateEingeloggt = 'Suchfeld';
+
     }
     
       
