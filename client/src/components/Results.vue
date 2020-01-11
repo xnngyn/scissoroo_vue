@@ -1,7 +1,11 @@
 <template>
 <div id="list" class="column">
 <h1>Überschrift Result Test</h1>
+
+
+
 </div>
+
 </template>
 
 <script>

@@ -47,7 +47,7 @@ export default {
   methods: {
    
       setResults: function() {
-          
+
           this.$store.state.componentStateEingeloggt = 'Results'
       }
     
@@ -97,5 +97,5 @@ form.example::after {
   display: table;
 }
  
-
+ 
 </style>
