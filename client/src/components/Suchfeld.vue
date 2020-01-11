@@ -1,10 +1,10 @@
 <template>
-    <div id="eingeloggt">
+    <div id ="suchfeld">
 
 
-<h1> EINGELOGGT! </h1>
+<h1> SUCHFELD! </h1>
      
-        <component v-bind:is="ladeKomponente"></component>
+        
         
 
     </div>
@@ -13,20 +13,23 @@
 
 <script>
 
+import Suchfeld from "./Suchfeld";
 
 
 
 export default {
 
     components: {
+
+        Suchfeld: Suchfeld
        
         
     },
-    name: 'eingeloggt',
+    name: 'suchfeld',
     data () {
         return {
 
-            ladeKomponente: 'Suchfeld'
+            
             
    
     }
