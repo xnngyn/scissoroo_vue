@@ -12,6 +12,18 @@
       <HomeEingeloggt v-else-if="eingeloggt"></HomeEingeloggt>
       </nav>	
 
+      <footer>
+			  <div class="container-fluid padding">
+		    	<div class="row text-center">
+
+
+            <div class="col-12">
+					    <h6>&copy; Scissoroo</h6>
+				    </div>
+          </div>	
+        </div>  				
+			</footer>
+
     </body>
   </div>
 </template>
