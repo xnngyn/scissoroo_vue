@@ -13,7 +13,7 @@
 
 <script>
 
-import Suchfeld from "./Suchfeld";
+
 
 
 
@@ -21,7 +21,7 @@ export default {
 
     components: {
 
-        Suchfeld: Suchfeld
+        
        
         
     },
