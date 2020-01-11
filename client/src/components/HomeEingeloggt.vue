@@ -14,13 +14,15 @@
 <script>
 
 import Suchfeld from "./Suchfeld";
+import Results from "./Results";
 
 
 
 export default {
 
     components: {
-       Suchfeld: Suchfeld
+       Suchfeld: Suchfeld,
+       Results: Results
         
     },
     name: 'eingeloggt',

@@ -10,7 +10,7 @@
 <!-- The form -->
 <form class="example" action="action_page.php">
   <input type="text" placeholder="Search.." name="search">
-  <button type="submit"><i class="fa fa-search"></i></button>
+  <button type="submit" @click="setResults"><i class="fa fa-search"></i></button>
 </form>
         
 
@@ -36,9 +36,17 @@ export default {
     data () {
         return {
 
-            
+             
             
    
+    }
+  },
+
+  methods: {
+   
+
+    setResult: function() {
+      this.$HomeEingeloggt.data.ladeKomponente = "Results";
     }
   }
 }
