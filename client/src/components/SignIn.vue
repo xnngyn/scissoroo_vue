@@ -8,8 +8,8 @@
                     <h5>Anmelden</h5>
 
 					<form>
-						<input id="emaillogin" type="email" name="emaillogin" placeholder="E-Mail"><br/>
-						<input id="passlogin" type="password" name="passlogin" placeholder="Passwort"><br/>
+						<input id="emaillogin" v-model = "email" type="email" name="emaillogin" placeholder="E-Mail"><br/>
+						<input id="passlogin" v-model = "pass" type="password" name="passlogin" placeholder="Passwort"><br/>
 						<button type="submit" class="btn btn-primary btn-block">Anmelden</button>
 						<a href="" data-toggle="modal" data-target="#registrieren">Neu hier?</a><br/> <!-- Definiert in HomeNichtEingeloggt -->
 						<a href="" data-toggle="modal" data-target="#pwVergessen">Passwort vergessen?</a>
@@ -26,7 +26,7 @@
 									</div>
 									<div class="modal-body">
 										<section class="insertuser">
-											<form action="/insertuser" method="post">
+											<form action="#">
 												<div class="col-12">
 													<input class="form-control" id="email" type="email" name="email" placeholder="E-Mail-Adresse eingeben" required/><br/>
 												</div>
@@ -52,7 +52,13 @@
 
 <script>
 export default {
-    
+	name: 'Login',
+	data() {
+		return {
+			email: '',
+			pass: ''
+		}
+	}
 }
 </script>
 
