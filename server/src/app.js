@@ -58,7 +58,7 @@ app.post('/register', (req, res) => {
 
         //Set Hashed Password
 			newUser.pass = hash;
-        });
+        
         // create new User
        newUser.save(function(err, user){
             if(err){
@@ -69,7 +69,7 @@ app.post('/register', (req, res) => {
                     message: 'User registrated successfully!'
                 })
             }
-        
+        });
         });
 })
 
