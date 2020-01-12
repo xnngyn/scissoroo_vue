@@ -1,7 +1,7 @@
 <template>
     <div id="eingeloggt">
-
-        <component v-bind:is="$store.getters.componentStateEingeloggt"></component>
+		<button id="btnMyProfil" class="btn btn-secondary mr-sm-2" @click="setMyProfile">Mein Profil</button>
+		<button id="btnLogout" @click="logout" class="btn btn-secondary">Ausloggen</button>
 
     </div>
 
@@ -34,8 +34,6 @@ export default {
     };
   },
   methods: {
-
-    //Session Authentication 
 
     setMyProfile: function() {
       this.$store.state.componentStateEingeloggt = "MyProfile";

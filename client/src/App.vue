@@ -6,8 +6,8 @@
     <nav class="navbar navbar-light bg-light">
 		  <a class="navbar-brand"><div @click="setSuchfeld(); setHomeText();"><img src="https://raw.githubusercontent.com/xnngyn/Scissoroo/master/public/images/Scissoroo_Logo.jpg" width="100" height="100" alt=""> </div></a> <!--../Bilder/Scissoroo_Logo.jpg-->
 			<button id="home" @click="setSuchfeld(); setHomeText();">Home</button>
-      <form class="form-inline">
-			</form>
+      <ButtonsNichtEingeloggt v-if="!this.$store.state.eingeloggt"></ButtonsNichtEingeloggt>
+      <ButtonsEingeloggt v-else-if="this.$store.state.eingeloggt"></ButtonsEingeloggt>
       
       
       </nav>	
@@ -34,14 +34,18 @@
 </template>
 
 <script>
+import ButtonsNichtEingeloggt from '@/components/ButtonsNichtEingeloggt';
+import ButtonsEingeloggt from '@/components/ButtonsEingeloggt';
 import HomeNichtEingeloggt from '@/components/HomeNichtEingeloggt';
 import HomeEingeloggt from '@/components/HomeEingeloggt';
 
 
 export default {
   components: {
-'HomeNichtEingeloggt': HomeNichtEingeloggt,
-'HomeEingeloggt': HomeEingeloggt
+    'ButtonsNichtEingeloggt': ButtonsNichtEingeloggt,
+    'ButtonsEingeloggt': ButtonsEingeloggt,   
+    'HomeNichtEingeloggt': HomeNichtEingeloggt,
+    'HomeEingeloggt': HomeEingeloggt
 
 
   },
