@@ -1,4 +1,5 @@
 <template>
+<div id="inhalt" class="container-fluid padding text-white">
    <div>
        
 <h3>Mein Profil</h3>
@@ -10,7 +11,7 @@
 		Hausnummer: <label id="hausnr" name="hausnr"></label><br/>
 		PLZ: <label id="plz" name="plz"></label><br/>
 		Stadt: <label id="stadt" name="stadt"></label><br/>
-		
+		</div>
     </div>
 </template>
 
@@ -21,5 +22,8 @@ export default {
 </script>
 
 <style>
+#inhalt{
+    background-color: hsla(0,0%,50%,0.5);
+}
 
 </style>
