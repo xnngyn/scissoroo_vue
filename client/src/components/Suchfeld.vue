@@ -7,9 +7,7 @@
     />
 
     <div class="row justify-content-center text-center">
-      <div class="col-6">
-        <p></p>
-        <p></p>
+      <div id="suche" class="col-6">
         <!-- The form -->
         <form class="example" action="action_page.php">
           <input type="text" placeholder="Search.." name="search" v-model="$store.state.ort"/>
@@ -17,7 +15,6 @@
             <i class="fa fa-search"></i>
           </button>
         </form>
-        <p></p>
         
       </div>
     </div>
@@ -53,8 +50,8 @@ export default {
   box-sizing: border-box;
 }
 
-p {
-  height:100%;
+#suche {
+  margin-top: 20%;
 }
 
 /* Style the search field */
