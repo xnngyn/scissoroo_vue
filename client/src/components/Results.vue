@@ -46,7 +46,7 @@ export default {
         }
     },
     mounted(){
-        this.getFilter()
+        this.getFriseure()
     },
     methods: {
         async getFriseure(){
@@ -62,11 +62,9 @@ export default {
         },
 
         checkOutput: function(friseur) {
-
-           
-           
-
-            if(friseur.Stadt == this.$store.getters.ort) {
+            var input = new RegExp(this.$store.getters.ort)
+            var output = friseur.Stadt
+            if(input.test(output)) {
             return true;
 
         }
