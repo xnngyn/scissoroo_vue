@@ -11,7 +11,7 @@
     <component v-bind:is="$store.getters.componentState"></component>
 
     <!-- Nachfolgendes div enthält das Modal bzw. "Popup" für den Button Registrierung -->
-    <div class="modal fade" id="registrierung" tabindex="-1" role="dialog" aria-labelledby="registrierungTitle" aria-hidden="true">
+    <div class="modal fade" ref="registrierung" id="registrierung" tabindex="-1" role="dialog" aria-labelledby="registrierungTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-scrollable" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -178,7 +178,7 @@
                       <hr />
 
                       <div class="col-12">
-                        <button type="submit" class="btn btn-primary btn-block" data-toggle="modal" data-target="#erfolgreg" data-dismiss="modal">Registrieren</button>
+                        <button type="submit" class="btn btn-primary btn-block">Registrieren</button>
                         <br />
                         <h6>Durch die Registrierung stimmst du den Nutzungsbestimmungen und der Datenschutzerklärung zu.</h6>
                       </div>
@@ -300,8 +300,11 @@ export default {
             this.plz= '',
             this.stadt= '',
             this.email= '',
-            this.pass= ''
+            this.pass= '',
+            //Schließe Form Modal
+            $('#registrierung').modal('hide');
             //start neue Modal
+            $('#erfolgreg').modal('show');
             
 
         })
