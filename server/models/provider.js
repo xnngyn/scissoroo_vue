@@ -18,7 +18,7 @@ var ProviderSchema = new mongoose.Schema({
         type    : String
     },
     Telefon:{
-        type    : Number
+        type    : String
     },
     Webseite:{
         type    : String
