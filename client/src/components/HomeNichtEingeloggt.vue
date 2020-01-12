@@ -249,18 +249,6 @@ export default {
         document.getElementById("btnSignIn").disabled = false;
       }
     },
-    resetform: function() {
-      this.sex = '',
-      this.fname= '',
-      this.lname= '',
-      this.bdate= '',
-      this.strasse= '',
-      this.hausnr= '',
-      this.plz= '',
-      this.stadt= '',
-      this.email= '',
-      this.pass= ''
-    },
 
     checkForm: function() {
       //to do?
@@ -279,7 +267,17 @@ export default {
           pass: this.pass,
         }).then((res)=>{
             //hier kommt die Registrierungsbestätigung
-            this.resetform;
+            this.sex = '',
+            this.fname= '',
+            this.lname= '',
+            this.bdate= '',
+            this.strasse= '',
+            this.hausnr= '',
+            this.plz= '',
+            this.stadt= '',
+            this.email= '',
+            this.pass= ''
+            
 
         })
         
