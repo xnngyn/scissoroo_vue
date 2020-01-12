@@ -23,7 +23,7 @@ var UserSchema = new mongoose.Schema({
     },
     sex:{
         type    : String,
-        required: true
+        required: false
     },
     strasse:{
         type    : String,
