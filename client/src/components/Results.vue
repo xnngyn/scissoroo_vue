@@ -14,6 +14,7 @@
 <script>
 
 import FriseurAnzeige from "./FriseurAnzeige";
+import PostService from "../services/PostService"
 
 export default {
 
@@ -25,18 +26,15 @@ export default {
      
     data() {
         return {
-
             friseurs: [
-{id:1, name: 'Asiafriseur', adresse: 'AAASIEEEN', email: 'asd', telefon: '0711/321654987', website: 'asd', parkplaetze: 2, montag: '10-12', dienstag: '', mittwoch: '', donnerstag: '', freitag: '', samstag: '', sonntag: ''},
-{id:2, name: 'Ostfriseur', adresse: 'slaveländle', email: 'asd', telefon: '0711/321654987', website: 'asd', parkplaetze: 2, montag: '10-12', dienstag: '', mittwoch: '', donnerstag: '', freitag: '', samstag: '', sonntag: ''}
-
-
-            
-
- 
+//{id:1, name: 'Asiafriseur', adresse: 'AAASIEEEN', email: 'asd', telefon: '0711/321654987', website: 'asd', parkplaetze: 2, montag: '10-12', dienstag: '', mittwoch: '', donnerstag: '', freitag: '', samstag: '', sonntag: ''},
+//{id:2, name: 'Ostfriseur', adresse: 'slaveländle', email: 'asd', telefon: '0711/321654987', website: 'asd', parkplaetze: 2, montag: '10-12', dienstag: '', mittwoch: '', donnerstag: '', freitag: '', samstag: '', sonntag: ''}
             ]
 
         }
+    },
+    mounted(){
+        
     }
     
 }
