@@ -53,7 +53,7 @@ export default {
   data () {
     return {
 
-      eingeloggt:false
+      eingeloggt:true
       
     }
   },
