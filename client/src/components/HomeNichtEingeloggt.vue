@@ -25,7 +25,7 @@
               <div class="row justify-content-center text-center">
                 <div id="createAcc">
                   <section class="insertuser">
-                    <form @submit="addUser"> 
+                    <form v-on:submit.prevent="addUser"> 
                       <div class="col-12">
                         <div class="row">
                           <label>Titel</label>
@@ -178,7 +178,7 @@
                       <hr />
 
                       <div class="col-12">
-                        <button type="submit" class="btn btn-primary btn-block" @click="addUser">Registrieren</button>
+                        <button type="submit" class="btn btn-primary btn-block">Registrieren</button>
                         <br />
                         <h6>Durch die Registrierung stimmst du den Nutzungsbestimmungen und der Datenschutzerklärung zu.</h6>
                       </div>
@@ -266,6 +266,7 @@ export default {
           email: this.email,
           pass: this.pass,
         })
+        //hier kommt die Registrierungsbestätigung
       }    
   },
   

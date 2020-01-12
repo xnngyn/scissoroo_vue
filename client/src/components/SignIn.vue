@@ -7,10 +7,10 @@
 				    <section class="loginuser">
                     <h5>Anmelden</h5>
 
-					<form>
+					<form @submit.prevent="login">
 						<input id="emaillogin" v-model = "email" type="email" name="emaillogin" placeholder="E-Mail"><br/>
 						<input id="passlogin" v-model = "pass" type="password" name="passlogin" placeholder="Passwort"><br/>
-						<button type="submit" class="btn btn-primary btn-block">Anmelden</button>
+						<button class="btn btn-primary btn-block">Anmelden</button>
 						<a href="" data-toggle="modal" data-target="#registrieren">Neu hier?</a><br/> <!-- Definiert in HomeNichtEingeloggt -->
 						<a href="" data-toggle="modal" data-target="#pwVergessen">Passwort vergessen?</a>
 						
@@ -57,6 +57,12 @@ export default {
 		return {
 			email: '',
 			pass: ''
+		}
+	},
+	methods:{
+		login() {
+			console.log(this.email)
+			console.log(this.pass)
 		}
 	}
 }
