@@ -3,7 +3,6 @@
     <hr>
     <div class="friseure-container">
         <div class="friseur">
-        <h1>{{ $store.getters.ort }}</h1>
         <article v-for="friseur in friseure"
             v-bind:key="friseur._id" @click="friseur.show = !friseur.show">
         
