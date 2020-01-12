@@ -82,14 +82,13 @@ app.post('/login', (req, res) =>{
                 var err = new Error('Falsche Email oder Passwort');
                 console.log(err)
                 err.status = 401;
-                res.send({
-                    success: false,
+                res.status(400).send({
                     message: 'Login not successfull!'
                 })
             } else {
                 //req.session.userId = user._id;
                 res.send({
-                    success: true,
+                    "success": true,
                     message: 'Login successfull!'
                 })
             }

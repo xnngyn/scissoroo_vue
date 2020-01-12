@@ -66,9 +66,9 @@ export default {
         await PostService.login({
 			emaillogin: this.emaillogin,
 			passlogin: this.passlogin
-		}).then((res) =>{
+		}).then(res =>{
 			console.log("Login erfolgreich")
-		}).catch((err) => {
+		}).catch(err => {
 			console.log("Login nicht erfolgreich")
 		})
 	  }
