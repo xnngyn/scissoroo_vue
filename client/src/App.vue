@@ -20,7 +20,7 @@
       
 
       <div class="footer">
-        <p>Footer</p>
+        © 2020 Copyright: <a href="http://localhost:8080/">Scissoroo</a>
       </div>
   
    
