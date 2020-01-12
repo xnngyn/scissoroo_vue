@@ -32,16 +32,6 @@ app.get('/', (req, res) =>{
     })
 });
 
-app.post('/filter', (req, res) =>{
-    Provider.find({"Adresse": { $regex: '.*' + req.body.query + '.*' } }, function(err, result){
-        if(err)
-            res.send(err)
-        res.send({
-            friseure: result
-        })
-    })
-});
-
 app.get('/results', (req, res) =>{
     Provider.find({}, function(err, result){
         if(err)

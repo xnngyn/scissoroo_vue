@@ -3,7 +3,6 @@
 
     <div class="friseure-container">
         <div class="friseur">
-            <h1>{{ this.$store.getters.ort }}</h1>
         <article v-for="friseur in friseure"
             v-bind:key="friseur._id" @click="friseur.show = !friseur.show" v-show="checkOutput(friseur)">
         
@@ -54,17 +53,11 @@ export default {
             this.friseure = response.data.friseure
         },
 
-        async getFilter(){
-            const response = await PostService.filter({
-                query : "70193"
-            })
-            this.friseure = response.data.friseure
-        },
-
         checkOutput: function(friseur) {
             var input = new RegExp(this.$store.getters.ort)
-            var output = friseur.Stadt
-            if(input.test(output)) {
+            var adresse = friseur.Adresse
+            var name = friseur.Name
+            if(input.test(adresse) || input.test(name)) {
             return true;
 
         }
