@@ -64,7 +64,7 @@ export default {
            
            
 
-            if(friseur.Stadt == this.$store.getters.ort) {
+            if(friseur.Stadt == this.$store.getters.ort || friseur.Plz == this.$store.getters.ort) {
             return true;
 
         }
