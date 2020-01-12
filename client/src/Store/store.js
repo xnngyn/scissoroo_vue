@@ -9,7 +9,8 @@ export const store = new Vuex.Store({
         componentState: 'HomeText',
         componentStateEingeloggt: 'Suchfeld',
         eingeloggt: false,
-        ort: ''
+        ort: '',
+        idSpeicher: 0
     },
 
     mutations: {
@@ -27,6 +28,10 @@ export const store = new Vuex.Store({
 
             changeOrt(state, payload) {
                 state.ort = ort
+            },
+
+            changeIdSpeicher(state, payload) {
+                state.idSpeicher = idSpeicher
             }
 
 
@@ -36,6 +41,7 @@ export const store = new Vuex.Store({
       componentState:  state => state.componentState,
       componentStateEingeloggt: state => state.componentStateEingeloggt,
       eingeloggt: state => state.eingeloggt,
-      ort: state => state.ort
+      ort: state => state.ort,
+      idSpeicher: state=> state.idSpeicher
     }
 })

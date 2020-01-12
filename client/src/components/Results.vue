@@ -1,10 +1,11 @@
 <template>
-<div id="list" class="container">
-    <hr>
+<div id="list" class="container-fluid padding text-white">
+
     <div class="friseure-container">
         <div class="friseur">
+            <h1>{{ this.$store.getters.ort }}</h1>
         <article v-for="friseur in friseure"
-            v-bind:key="friseur._id" @click="friseur.show = !friseur.show">
+            v-bind:key="friseur._id" @click="friseur.show = !friseur.show" v-show="checkOutput(friseur)">
         
             <h3><a  title="">{{ friseur.Name }}</a></h3>
 			<img src="" alt="" />
@@ -18,7 +19,7 @@
 			<p v-show="friseur.show">Freitag: {{ friseur.Freitag}}</p>
 			<p v-show="friseur.show">Samstag: {{ friseur.Samstag}}</p>
 			<p v-show="friseur.show">Sonntag: {{ friseur.Sonntag}}</p>
-            <hr>
+            <hr class="bg-white">
         </article>
         </div>
     </div>
@@ -58,13 +59,31 @@ export default {
                 query : "70193"
             })
             this.friseure = response.data.friseure
+        },
+
+        checkOutput: function(friseur) {
+
+           
+           
+
+            if(friseur.Stadt == this.$store.getters.ort) {
+            return true;
+
         }
+
+return false;
+
+}
     }
     
 }
 </script>
 
 <style>
+
+#list{
+    background-color: hsla(0,0%,50%,0.5);
+}
 
 
 article {

@@ -7,24 +7,31 @@
     />
 
     <div class="row justify-content-center text-center">
-      <div class="col-6">
+      <div id="suche" class="col-6">
         <!-- The form -->
         <form class="example" action="action_page.php">
-          <input placeholder="Search.." name="search" v-model="$store.state.ort" v-on:input="zeigeStaedte(Ort)"/>
+          <input type="text" placeholder="Search.." name="search" v-model="$store.state.ort"/>
           <button type="submit" @click="setResults">
             <i class="fa fa-search"></i>
           </button>
         </form>
+        
       </div>
     </div>
   </div>
 </template>
 
 <script>
+
+
+
 export default {
+
+  
   name: "suchfeld",
   data() {
     return {
+
       
     };
   },
@@ -34,13 +41,6 @@ export default {
       this.$store.state.componentStateEingeloggt = "Results";
     },
 
-    zeigeStaedte: function(){
-      if(Ort = String) {
-        return null;
-      }
-
-      
-    }
   }
 };
 </script>
@@ -48,6 +48,10 @@ export default {
 <style>
 * {
   box-sizing: border-box;
+}
+
+#suche {
+  margin-top: 20%;
 }
 
 /* Style the search field */
