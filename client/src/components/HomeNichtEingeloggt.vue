@@ -196,7 +196,7 @@
     </div> <!-- Modal Ende -->
 
     <!-- Nachfolgendes div enthält das Modal bzw. "Popup" für den Button Registrieren -->
-    <div class="modal fade" id="registrieren" tabindex="-1" role="dialog" aria-labelledby="registrierenTitle" aria-hidden="true">
+    <div class="modal fade" id="erfolgreg" tabindex="-1" role="dialog" aria-labelledby="registrierenTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-scrollable" role="document">
         <div class="modal-content">
           <div class="modal-header">
