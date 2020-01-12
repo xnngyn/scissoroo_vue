@@ -96,7 +96,6 @@ app.post('/login', (req, res) =>{
             if(error || !user){
                 var err = new Error('Falsche Email oder Passwort');
                 console.log(err)
-                err.status = 401;
                 res.status(400).send({
                     message: 'Login not successfull!'
                 })
@@ -109,6 +108,30 @@ app.post('/login', (req, res) =>{
             }
         })
     }
+})
+
+// Authentication via Session for HP, Profile, Result
+app.get('/authentication', function(req, res, next){
+    User.findById(req.session.userId)
+    .exec(function (error, user) {
+      if (error) {
+        res.send(error);
+      } else {
+        if (user === null) {
+          var err = new Error('Not authorized! Go back!');
+          console.log(err)
+          res.status(400).send({
+              message: 'Authentication not successfull'
+          })
+          return next(err);
+        } else {
+          res.send({
+              "success": true,
+              message: 'Authentication successfull!'
+          })
+        }
+      }
+    });
 })
 
 // Mongo DB Database
