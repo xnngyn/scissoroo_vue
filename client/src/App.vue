@@ -12,22 +12,16 @@
       
       </nav>	
 
-      <div id="hauptbody"> 
+      <div> 
         <HomeNichtEingeloggt v-if="!this.$store.state.eingeloggt"></HomeNichtEingeloggt>
         <HomeEingeloggt v-else-if="this.$store.state.eingeloggt"></HomeEingeloggt>
-    </div>   
+      </div>   
 
-      <footer>
-			  <div class="container-fluid padding">
-		    	<div class="row text-center">
+      
 
-
-            <div class="col-12">
-					    <h6>&copy; Scissoroo</h6>
-				    </div>
-          </div>	
-        </div>  				
-			</footer>
+      <div class="footer">
+        <p>Footer</p>
+      </div>
   
    
   </div>
@@ -84,20 +78,22 @@ export default {
 
 <style>
 
-
-
-
-html{
-	height: 140%;
-  background-color: grey;
-	background-image: url(https://raw.githubusercontent.com/xnngyn/Scissoroo/master/public/images/Home_Hintergrund.jpg);
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center;
+body {
+  background: url('https://raw.githubusercontent.com/xnngyn/Scissoroo/master/public/images/Home_Hintergrund.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
 
-
-
-
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
+}
 
 </style>
