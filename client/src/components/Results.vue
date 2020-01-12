@@ -60,6 +60,10 @@ export default {
         },
 
         checkOutput: function(friseur) {
+
+           
+           
+
             if(friseur.Stadt == this.$store.getters.ort) {
             return true;
 
