@@ -178,7 +178,7 @@
                       <hr />
 
                       <div class="col-12">
-                        <button type="submit" class="btn btn-primary btn-block" data-toggle="modal" data-target="#registrieren" data-dismiss="modal">Registrieren</button>
+                        <button type="submit" class="btn btn-primary btn-block" data-toggle="modal" data-target="#erfolgreg" data-dismiss="modal">Registrieren</button>
                         <br />
                         <h6>Durch die Registrierung stimmst du den Nutzungsbestimmungen und der Datenschutzerklärung zu.</h6>
                       </div>
