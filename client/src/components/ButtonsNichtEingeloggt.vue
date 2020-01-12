@@ -279,7 +279,7 @@ export default {
 
      setDetailsansicht: function(){
 
-      this.$store.state.componentState = "Detailsansicht";
+      this.$store.state.componentState = "DetailsAnsicht";
     },
 
     checkForm: function() {

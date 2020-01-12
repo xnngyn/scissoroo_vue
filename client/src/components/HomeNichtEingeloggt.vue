@@ -63,6 +63,12 @@ export default {
       }
     },
 
+    setDetailsansicht: function(){
+
+      this.$store.state.componentState = "DetailsAnsicht";
+    },
+
+
     checkForm: function() {
       //to do?
     },
