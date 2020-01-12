@@ -5,7 +5,8 @@
 
     <nav class="navbar navbar-light bg-light">
 		  <a class="navbar-brand"><div @click="setSuchfeld(); setHomeText();"><img src="https://raw.githubusercontent.com/xnngyn/Scissoroo/master/public/images/Scissoroo_Logo.jpg" width="100" height="100" alt=""> </div></a> <!--../Bilder/Scissoroo_Logo.jpg-->
-			<form class="form-inline">
+			<button id="home" @click="setSuchfeld(); setHomeText();">Home</button>
+      <form class="form-inline">
 			</form>
       
       
@@ -48,7 +49,7 @@ export default {
   data () {
     return {
 
-      eingeloggt:true
+      eingeloggt:false
       
     }
   },
