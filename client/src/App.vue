@@ -48,7 +48,7 @@ export default {
   data () {
     return {
 
-      eingeloggt:true
+      eingeloggt:false
       
     }
   },
