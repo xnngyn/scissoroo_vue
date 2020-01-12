@@ -134,6 +134,25 @@ app.get('/authentication', function(req, res, next){
     });
 })
 
+app.post('/logout', (req, res) =>{
+    if (req.session) {
+    // delete session object
+    req.session.destroy(function (err) {
+        if (err) {
+            console.log(err);
+            res.status(400).send({
+                message: 'Logout not successfull!'
+            })
+         } else {
+            res.send({
+                "success": true,
+                message: 'Logout successfull!'
+            })
+        }
+    });
+}
+})
+
 // Mongo DB Database
 var mongoose = require('mongoose');
 var mongoDB = 'mongodb+srv://scissoroo_admin:scissoroo_admin@scissoroodb-vjd2z.mongodb.net/scissoroo?retryWrites=true&w=majority';

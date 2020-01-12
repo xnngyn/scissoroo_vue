@@ -8,7 +8,7 @@ export const store = new Vuex.Store({
     state: {
         componentState: 'HomeText',
         componentStateEingeloggt: 'Suchfeld',
-        eingeloggt: true
+        eingeloggt: false
     },
 
     mutations: {

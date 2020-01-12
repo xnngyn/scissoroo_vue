@@ -14,6 +14,12 @@ var ProviderSchema = new mongoose.Schema({
     Adresse:{
         type    : String
     },
+    Plz:{
+        type    : Number
+    },
+    Stadt:{
+        type    : String
+    },
     Email:{
         type    : String
     },

@@ -11,6 +11,8 @@
             <h3><a  title="">{{ friseur.Name }}</a></h3>
 			<img src="" alt="" />
 			<p>{{ friseur.Adresse }}</p>
+            <p>{{ friseur.Plz }}</p>
+            <p>{{ friseur.Stadt }}</p>
 			<p>{{ friseur.Email}}</p>
 			<p>{{ friseur.Telefon}}</p>
 			<p v-show="friseur.show">Montag: {{ friseur.Montag}}</p>
