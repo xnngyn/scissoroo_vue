@@ -1,6 +1,6 @@
 <template>
 <div id="list" class="container">
-    <h1>Friseure in deiner Umgebung</h1>
+    <h1>Friseure in deiner Umgebung Blyat</h1>
     <hr>
     <div class="friseure-container">
         <div class="friseur">
