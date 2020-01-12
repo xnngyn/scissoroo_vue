@@ -29,7 +29,7 @@ app.post('/register', (req, res) => {
     //Get Form Values
     var fname = req.body.fname;
     var lname = req.body.lname;
-    var bdate = req.body.gdatum;
+    var bdate = req.body.bdate;
     var sex = req.body.sex;
     var strasse = req.body.strasse;
     var hausnr = req.body.hausnr;
@@ -51,13 +51,13 @@ app.post('/register', (req, res) => {
         pass: pass
  });
 
-//       var salt = 10;
+       var salt = 10;
 
-//		bcrypt.hash(newUser.pass, salt, function(err,hash) {
-//			if(err) throw err;
+		bcrypt.hash(newUser.pass, salt, function(err,hash) {
+			if(err) throw err;
 
         //Set Hashed Password
-//			newUser.pass = hash;
+			newUser.pass = hash;
 
         // create new User
        newUser.save(function(err, user){
@@ -70,7 +70,7 @@ app.post('/register', (req, res) => {
                 })
             }
         });
-//        });
+        });
 })
 
 // Mongo DB Database
