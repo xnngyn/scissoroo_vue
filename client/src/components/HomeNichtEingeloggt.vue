@@ -87,6 +87,7 @@
                           <input
                             class="form-control"
                             id="gdatum"
+                            v-model="bdate"
                             type="date"
                             name="gdatum"
                             required
@@ -106,6 +107,7 @@
                               class="form-control col-9"
                               id="strasse"
                               type="text"
+                              v-model="strasse"
                               name="strasse"
                               placeholder="Straße"
                               required
@@ -114,6 +116,7 @@
                               class="form-control col-3"
                               id="hausnr"
                               type="text"
+                              v-model="hausnr"
                               name="hausnr"
                               placeholder="Nr."
                               required
@@ -125,6 +128,7 @@
                               class="form-control col-4"
                               id="plz"
                               type="text"
+                              v-model="plz"
                               name="plz"
                               placeholder="PLZ"
                               required
@@ -132,6 +136,7 @@
                             <input
                               class="form-control col-8"
                               id="stadt"
+                              v-model="stadt"
                               type="text"
                               name="stadt"
                               placeholder="Stadt"
@@ -148,7 +153,7 @@
                           <label for="email">E-Mail</label>
                         </div>
                         <div class="row">
-                          <input class="form-control" id="email" name="email" type="email" required />
+                          <input class="form-control" id="email" v-model="email" name="email" type="email" required />
                         </div>
                       </div>
 
@@ -162,6 +167,7 @@
                           <input
                             class="form-control"
                             id="pass"
+                            v-model="pass"
                             name="pass"
                             type="password"
                             required
