@@ -51,6 +51,11 @@ export default {
         async getFriseure(){
             const response = await PostService.fetchResults()
             this.friseure = response.data.friseure
+        },
+
+        async getFilter(){
+            const response = await PostService.filter()
+            this.friseure = response.data.friseure
         }
     }
     

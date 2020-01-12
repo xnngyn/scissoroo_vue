@@ -32,6 +32,16 @@ app.get('/', (req, res) =>{
     })
 });
 
+app.get('/filter', (req, res) =>{
+    Provider.find({}, function(err, result){
+        if(err)
+            res.send(err)
+        res.send({
+            friseure: result
+        })
+    })
+});
+
 app.get('/results', (req, res) =>{
     Provider.find({}, function(err, result){
         if(err)
