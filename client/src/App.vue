@@ -1,8 +1,7 @@
 <template>
   <div id="app">
 
-  <body> 
-    
+ 
 
     <nav class="navbar navbar-light bg-light">
 		  <a class="navbar-brand"><div @click="setSuchfeld(); setHomeText();"><img src="https://raw.githubusercontent.com/xnngyn/Scissoroo/master/public/images/Scissoroo_Logo.jpg" width="100" height="100" alt=""> </div></a> <!--../Bilder/Scissoroo_Logo.jpg-->
@@ -12,10 +11,10 @@
       
       </nav>	
 
-      <div id="hauptbody">
+      <div id="hauptbody"> 
         <HomeNichtEingeloggt v-if="!eingeloggt"></HomeNichtEingeloggt>
         <HomeEingeloggt v-else-if="eingeloggt"></HomeEingeloggt>
-      </div>
+    </div>   
 
       <footer>
 			  <div class="container-fluid padding">
@@ -28,8 +27,8 @@
           </div>	
         </div>  				
 			</footer>
-
-    </body>
+  
+   
   </div>
 </template>
 
@@ -81,14 +80,10 @@ export default {
 <style>
 
 
-#Test {
-  background-color: white;
-  height: 100%;
-  
-}
+
 
 html{
-	height: 120%;
+	height: 140%;
   background-color: grey;
 	background-image: url(https://raw.githubusercontent.com/xnngyn/Scissoroo/master/public/images/Home_Hintergrund.jpg);
 	background-repeat: no-repeat;
@@ -96,15 +91,8 @@ html{
 	background-position: center;
 }
 
-body {
-  background-color: white;
 
 
-}
 
-nav{
-
-  background-color: white;
-}
 
 </style>

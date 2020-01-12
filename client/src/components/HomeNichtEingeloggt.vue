@@ -1,4 +1,5 @@
 <template>
+<div>
   <div id="buttons">
     
     <!-- Button trigger modal -->
@@ -6,9 +7,12 @@
     
     <!--  <button class="btn btn-secondary mr-sm-2" @click="setSignUp">Registrierung</button> -->
     <button id="btnSignIn" class="btn btn-secondary" @click="setSignIn">Anmelden</button>
-    <button class="btn btn-secondary" @click="setResults">Results</button>
+    
+  </div>
 
-    <component v-bind:is="$store.getters.componentState"></component>
+    <div id="WICHTIG">
+    <component id="mittelKomponente" v-bind:is="$store.getters.componentState"></component>
+    </div>
 
     <!-- Nachfolgendes div enthält das Modal bzw. "Popup" für den Button Registrierung -->
     <div class="modal fade" id="registrierung" tabindex="-1" role="dialog" aria-labelledby="registrierungTitle" aria-hidden="true">
@@ -313,7 +317,15 @@ export default {
 </script>
 
 <style>
-buttons {
-  float: right;
+
+.WICHTIG{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
+
+
+
+
 </style>
