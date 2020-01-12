@@ -91,8 +91,8 @@ body {
    left: 0;
    bottom: 0;
    width: 100%;
-   background-color: red;
-   color: white;
+   background-color: rgb(68, 24, 24);
+   color: rgb(158, 19, 19);
    text-align: center;
 }
 
