@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="container-fluid padding">
+        <div class="container-fluid padding border bg-light">
 		
             <div class="row justify-content-center text-center">
 			    <div>
