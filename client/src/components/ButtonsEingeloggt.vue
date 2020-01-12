@@ -2,7 +2,6 @@
     <div id="eingeloggt">
 		<button id="btnMyProfil" class="btn btn-secondary mr-sm-2" @click="setMyProfile">Mein Profil</button>
 		<button id="btnLogout" @click="logout" class="btn btn-secondary">Ausloggen</button>
-
     </div>
 
 </template>
@@ -19,6 +18,7 @@ import PostService from '../services/PostService';
 export default {
 
     components: {
+       
         'MyProfile': MyProfile,
         'Suchfeld': Suchfeld,
         'Results': Results
@@ -49,6 +49,8 @@ export default {
         this.$store.state.eingeloggt = false
 
     }
+
+   
 
   }
 }
