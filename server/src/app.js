@@ -22,9 +22,10 @@ app.get('/results', (req, res) =>{
         if(err)
             res.send(err)
         res.json(result)
+    })
 });
 
-app.post('/register', (req, res) => {
+app.post('/insertuser', (req, res) => {
     //Get Form Values
     var fname = req.body.fname;
     var lname = req.body.lname;
@@ -48,7 +49,7 @@ app.post('/register', (req, res) => {
         stadt: stadt,
         email: email,
         pass: pass
-    });
+ });
 
 //       var salt = 10;
 
