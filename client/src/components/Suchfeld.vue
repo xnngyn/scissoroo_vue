@@ -10,7 +10,7 @@
       <div class="col-6">
         <!-- The form -->
         <form class="example" action="action_page.php">
-          <input type="text" placeholder="Search.." name="search" v-model="$store.state.ort" v-on:input="zeigeStaedte(Ort)"/>
+          <input type="text" placeholder="Search.." name="search" v-model="$store.state.ort"/>
           <button type="submit" @click="setResults">
             <i class="fa fa-search"></i>
           </button>
@@ -25,9 +25,12 @@
 
 
 export default {
+
+  
   name: "suchfeld",
   data() {
     return {
+
       
     };
   },
@@ -37,13 +40,6 @@ export default {
       this.$store.state.componentStateEingeloggt = "Results";
     },
 
-    zeigeStaedte: function(){
-      if(Ort = String) {
-        return null;
-      }
-
-      
-    }
   }
 };
 </script>
