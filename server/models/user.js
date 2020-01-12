@@ -52,8 +52,9 @@ var UserSchema = new mongoose.Schema({
         bcrypt  : true,
         min: [7, 'password too short']
     }
+}, { collection: 'users'}
 
-});
+);
 
 //authenticate input against database
 UserSchema.statics.authenticate = function (email, pass, callback) {

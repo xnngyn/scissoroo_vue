@@ -25,7 +25,7 @@ app.get('/results', (req, res) =>{
     })
 });
 
-app.post('/insertuser', (req, res) => {
+app.post('/register', (req, res) => {
     //Get Form Values
     var fname = req.body.fname;
     var lname = req.body.lname;
