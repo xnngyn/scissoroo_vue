@@ -40,12 +40,12 @@ export default {
     data() {
         return {
             friseure: [],
-            
+            search: ''
 
         }
     },
     mounted(){
-        this.getFriseure()
+        this.getFilter()
     },
     methods: {
         async getFriseure(){
@@ -54,7 +54,9 @@ export default {
         },
 
         async getFilter(){
-            const response = await PostService.filter()
+            const response = await PostService.filter({
+                query : "70193"
+            })
             this.friseure = response.data.friseure
         }
     }

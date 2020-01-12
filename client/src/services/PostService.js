@@ -25,6 +25,6 @@ export default {
   },
 
   filter(){
-    return axios.get(url_filter)
+    return axios.post(url_filter,params)
   }
 }
