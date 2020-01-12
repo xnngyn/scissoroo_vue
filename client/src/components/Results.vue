@@ -60,11 +60,7 @@ export default {
 </script>
 
 <style>
-#app {
-  height: 100%;
-  padding-top: 0px;
-  text-align: center;
-}
+
 
 article {
     text-align: center;
