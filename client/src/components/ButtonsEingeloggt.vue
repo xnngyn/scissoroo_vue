@@ -2,7 +2,6 @@
     <div id="eingeloggt">
 		<button id="btnMyProfil" class="btn btn-secondary mr-sm-2" @click="setMyProfile">Mein Profil</button>
 		<button id="btnLogout" @click="logout" class="btn btn-secondary">Ausloggen</button>
-    <button id="Detailansicht" @click="setDetailsansicht">Detailansicht</button>
     </div>
 
 </template>
@@ -13,13 +12,13 @@ import MyProfile from "./MyProfile";
 import Suchfeld from "./Suchfeld";
 import Results from "./Results";
 import PostService from '../services/PostService';
-import DetailsAnsicht from "./DetailsAnsicht";
+
 
 
 export default {
 
     components: {
-        'DetailsAnsicht': DetailsAnsicht,
+       
         'MyProfile': MyProfile,
         'Suchfeld': Suchfeld,
         'Results': Results
@@ -49,12 +48,9 @@ export default {
       await PostService.logout()
         this.$store.state.eingeloggt = false
 
-    },
-
-    setDetailsansicht: function(){
-
-      this.$store.state.componentStateEingeloggt = "Detailsansicht";
     }
+
+   
 
   }
 }

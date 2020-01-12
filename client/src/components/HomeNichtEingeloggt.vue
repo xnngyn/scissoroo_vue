@@ -14,7 +14,8 @@ import SignIn from "./SignIn";
 import SignUp from "./SignUp";
 import MyProfile from "./MyProfile";
 import Results from "./Results";
-import PostService from "../services/PostService"
+import PostService from "../services/PostService";
+import DetailsAnsicht from "./DetailsAnsicht";
 
 export default {
   components: {
@@ -22,7 +23,8 @@ export default {
     'SignIn': SignIn,
     'SignUp': SignUp,
     'MyProfile': MyProfile,
-    'Results': Results
+    'Results': Results,
+    'DetailsAnsicht': DetailsAnsicht
   },
   name: "buttons",
   data() {

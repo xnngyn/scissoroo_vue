@@ -7,7 +7,8 @@
     
     <!--  <button class="btn btn-secondary mr-sm-2" @click="setSignUp">Registrierung</button> -->
     <button id="btnSignIn" class="btn btn-secondary" @click="setSignIn">Anmelden</button>
-    
+
+    <button id="Detailansicht" @click="setDetailsansicht">Detailansicht</button>
   </div>
 
     <!-- Nachfolgendes div enthält das Modal bzw. "Popup" für den Button Registrierung -->
@@ -227,7 +228,8 @@ import SignIn from "./SignIn";
 import SignUp from "./SignUp";
 import MyProfile from "./MyProfile";
 import Results from "./Results";
-import PostService from "../services/PostService"
+import PostService from "../services/PostService";
+import DetailsAnsicht from "./DetailsAnsicht";
 
 export default {
   components: {
@@ -235,7 +237,8 @@ export default {
     'SignIn': SignIn,
     'SignUp': SignUp,
     'MyProfile': MyProfile,
-    'Results': Results
+    'Results': Results,
+    'DetailsAnsicht': DetailsAnsicht
   },
   name: "buttons",
   data() {
@@ -272,6 +275,11 @@ export default {
       if(document.getElementById("btnSignIn").disabled == true){
         document.getElementById("btnSignIn").disabled = false;
       }
+    },
+
+     setDetailsansicht: function(){
+
+      this.$store.state.componentState = "Detailsansicht";
     },
 
     checkForm: function() {
