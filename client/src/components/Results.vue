@@ -28,7 +28,7 @@
         </article>
         </div>
     </div>
-<FriseurAnzeige v-bind:friseurs="friseurs"></FriseurAnzeige>
+
 
 </div>
 
@@ -36,14 +36,14 @@
 
 <script>
 
-import FriseurAnzeige from "./FriseurAnzeige";
+
 import PostService from "../services/PostService"
 
 export default {
 
    components: {
 
-       'FriseurAnzeige': FriseurAnzeige
+       
 
    },
     name: 'results', 
