@@ -11,7 +11,7 @@
 						<input id="emaillogin" v-model = "email" type="email" name="emaillogin" placeholder="E-Mail"><br/>
 						<input id="passlogin" v-model = "pass" type="password" name="passlogin" placeholder="Passwort"><br/>
 						<button class="btn btn-primary btn-block">Anmelden</button>
-						<a href="" data-toggle="modal" data-target="#registrieren">Neu hier?</a><br/> <!-- Definiert in HomeNichtEingeloggt -->
+						<a href="" data-toggle="modal" data-target="#registrierung">Neu hier?</a><br/> <!-- Definiert in HomeNichtEingeloggt -->
 						<a href="" data-toggle="modal" data-target="#pwVergessen">Passwort vergessen?</a>
 						
 						<!-- Nachfolgendes div enthält das Modal bzw. "Popup" für den Link Passwort vergessen -->
