@@ -1,6 +1,6 @@
 <template>
-<div id="list" class="container">
-    <hr>
+<div id="list" class="container-fluid padding text-white">
+
     <div class="friseure-container">
         <div class="friseur">
         <article v-for="friseur in friseure"
@@ -18,7 +18,7 @@
 			<p v-show="friseur.show">Freitag: {{ friseur.Freitag}}</p>
 			<p v-show="friseur.show">Samstag: {{ friseur.Samstag}}</p>
 			<p v-show="friseur.show">Sonntag: {{ friseur.Sonntag}}</p>
-            <hr>
+            <hr class="bg-white">
         </article>
         </div>
     </div>
@@ -63,6 +63,10 @@ export default {
 </script>
 
 <style>
+
+#list{
+    background-color: hsla(0,0%,50%,0.5);
+}
 
 
 article {
