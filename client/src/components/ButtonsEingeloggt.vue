@@ -1,16 +1,7 @@
 <template>
     <div id="eingeloggt">
 		<button id="btnMyProfil" class="btn btn-secondary mr-sm-2" @click="setMyProfile">Mein Profil</button>
-		<button id="btnLogout" class="btn btn-secondary">Ausloggen</button>
-
-
-
-
-       
-    
-        <component v-bind:is="$store.getters.componentStateEingeloggt"></component>
-         
-        
+		<button id="btnLogout" @click="logout" class="btn btn-secondary">Ausloggen</button>
 
     </div>
 
@@ -50,7 +41,12 @@ export default {
 
     setResults: function() {
         this.$store.state.componentStateEingeloggt = 'Results';
-      }
+      },
+    
+    logout: function(){
+        this.$store.state.eingeloggt = false
+
+    }
 
   }
 }
