@@ -1,6 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
+const cookieParser = require('cookie-parser')
 const morgan = require('morgan')
 var bcrypt = require('bcrypt')
 var User = require('../models/user')
@@ -14,6 +15,7 @@ app.use(bodyParser.json())
 app.use(cors())
 
 //use sessions for tracking logins
+app.use(cookieParser())
 app.use(session({
     secret: 'work hard',
     resave: true,
