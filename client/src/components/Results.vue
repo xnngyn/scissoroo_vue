@@ -6,21 +6,21 @@
         <div class="friseur">
         
         <article v-for="friseur in friseure"
-            v-bind:key="friseur._id">
+            v-bind:key="friseur._id" @click="friseur.show = !friseur.show">
         
             <h3><a  title="">{{ friseur.Name }}</a></h3>
 			<img src="" alt="" />
 			<p>{{ friseur.Adresse }}</p>
 			<p>{{ friseur.Email}}</p>
 			<p>{{ friseur.Telefon}}</p>
-			<p>Montag: {{ friseur.Montag}}</p>
-			<p>Dienstag: {{ friseur.Dienstag}}</p>
-			<p>Mittwoch: {{ friseur.Mittwoch}}</p>
-			<p>Donnerstag: {{ friseur.Donnerstag}}</p>
-			<p>Freitag: {{ friseur.Freitag}}</p>
-			<p>Samstag: {{ friseur.Samstag}}</p>
-			<p>Sonntag: {{ friseur.Sonntag}}</p>
-            <p>show: {{ friseur.show }} </p>
+			<p v-show="friseur.show">Montag: {{ friseur.Montag}}</p>
+			<p v-show="friseur.show">Dienstag: {{ friseur.Dienstag}}</p>
+			<p v-show="friseur.show">Mittwoch: {{ friseur.Mittwoch}}</p>
+			<p v-show="friseur.show">Donnerstag: {{ friseur.Donnerstag}}</p>
+			<p v-show="friseur.show">Freitag: {{ friseur.Freitag}}</p>
+			<p v-show="friseur.show">Samstag: {{ friseur.Samstag}}</p>
+			<p v-show="friseur.show">Sonntag: {{ friseur.Sonntag}}</p>
+            <p v-show="friseur.show">show: {{ friseur.show }} </p>
             <hr>
         </article>
         </div>
@@ -66,4 +66,12 @@ export default {
   padding-top: 0px;
   text-align: center;
 }
+
+article {
+    text-align: center;
+    display: block;
+
+
+}
+
 </style>

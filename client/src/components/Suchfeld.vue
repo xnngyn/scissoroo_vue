@@ -2,7 +2,6 @@
     <div id ="suchfeld">
 
 
-<h1> SUCHFELD! </h1>
 
 
      
