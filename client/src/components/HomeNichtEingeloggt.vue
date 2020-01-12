@@ -178,7 +178,7 @@
                       <hr />
 
                       <div class="col-12">
-                        <button type="submit" class="btn btn-primary btn-block" data-toggle="modal" data-target="#registrieren" data-dismiss="modal">Registrieren</button>
+                        <button type="submit" class="btn btn-primary btn-block" data-toggle="modal" data-target="#erfolgreg" data-dismiss="modal">Registrieren</button>
                         <br />
                         <h6>Durch die Registrierung stimmst du den Nutzungsbestimmungen und der Datenschutzerklärung zu.</h6>
                       </div>
@@ -196,11 +196,11 @@
     </div> <!-- Modal Ende -->
 
     <!-- Nachfolgendes div enthält das Modal bzw. "Popup" für den Button Registrieren -->
-    <div class="modal fade" id="erfolgreg" tabindex="-1" role="dialog" aria-labelledby="registrierenTitle" aria-hidden="true">
+    <div class="modal fade" id="erfolgreg" tabindex="-1" role="dialog" aria-labelledby="erfolgregTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-scrollable" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="registrierenTitle">Bestätigung</h5>
+            <h5 class="modal-title" id="erfolgregTitle">Bestätigung</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
