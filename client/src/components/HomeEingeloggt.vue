@@ -1,5 +1,8 @@
 <template>
     <div id="eingeloggt">
+		<button id="btnMyProfil" class="btn btn-secondary mr-sm-2" @click="setMyProfile">Mein Profil</button>
+		<button id="btnLogout" class="btn btn-secondary">Ausloggen</button>
+
 
 
 <h1> EINGELOGGT! </h1>
@@ -16,6 +19,7 @@
 
 <script>
 
+import MyProfile from "./MyProfile";
 import Suchfeld from "./Suchfeld";
 import Results from "./Results";
 
@@ -24,8 +28,9 @@ import Results from "./Results";
 export default {
 
     components: {
-       'Suchfeld': Suchfeld,
-       'Results': Results
+        'MyProfile': MyProfile,
+        'Suchfeld': Suchfeld,
+        'Results': Results
         
     },
     name: 'eingeloggt',
@@ -36,12 +41,16 @@ export default {
          
             
    
-    }
+    };
   },
   methods: {
 
-      setResults: function() {
-          this.$store.state.componentStateEingeloggt = 'Results'
+    setMyProfile: function() {
+      this.$store.state.componentStateEingeloggt = "MyProfile";
+    },
+
+    setResults: function() {
+        this.$store.state.componentStateEingeloggt = 'Results';
       }
 
   }
