@@ -134,7 +134,7 @@ app.get('/authentication', function(req, res, next){
     });
 })
 
-app.post('/logout', (req, res) =>{
+app.get('/logout', (req, res) =>{
     if (req.session) {
     // delete session object
     req.session.destroy(function (err) {

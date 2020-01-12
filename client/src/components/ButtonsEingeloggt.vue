@@ -12,6 +12,7 @@
 import MyProfile from "./MyProfile";
 import Suchfeld from "./Suchfeld";
 import Results from "./Results";
+import PostService from '../services/PostService';
 
 
 
@@ -43,7 +44,10 @@ export default {
         this.$store.state.componentStateEingeloggt = 'Results';
       },
     
-    logout: function(){
+    async logout(){
+      await PostService.logout({
+        
+      })
         this.$store.state.eingeloggt = false
 
     }
