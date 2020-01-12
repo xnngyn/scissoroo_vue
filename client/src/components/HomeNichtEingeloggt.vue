@@ -31,7 +31,7 @@
                           <label>Titel</label>
                         </div>
                         <div class="row">
-                          <select id="sex" name="sex">
+                          <select v-model="sex" id="sex" name="sex">
                             <option value="Female" selected>Frau</option>
                             <option value="Male">Herr</option>
                           </select>
