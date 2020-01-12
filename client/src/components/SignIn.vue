@@ -7,7 +7,7 @@
 				    <section class="loginuser">
                     <h5>Anmelden</h5>
 
-					<form action="/users/login" method="post">
+					<form>
 						<input id="emaillogin" type="email" name="emaillogin" placeholder="E-Mail"><br/>
 						<input id="passlogin" type="password" name="passlogin" placeholder="Passwort"><br/>
 						<button type="submit" class="btn btn-primary btn-block">Anmelden</button>
