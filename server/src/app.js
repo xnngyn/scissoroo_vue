@@ -144,7 +144,6 @@ app.get('/logout', (req, res) =>{
                 message: 'Logout not successfull!'
             })
          } else {
-            req.logout()
             res.send({
                 "success": true,
                 message: 'Logout successfull!'
