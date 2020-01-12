@@ -45,9 +45,7 @@ export default {
       },
     
     async logout(){
-      await PostService.logout({
-        
-      })
+      await PostService.logout()
         this.$store.state.eingeloggt = false
 
     }
