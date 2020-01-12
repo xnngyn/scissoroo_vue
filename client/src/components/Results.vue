@@ -20,7 +20,6 @@
 			<p v-show="friseur.show">Freitag: {{ friseur.Freitag}}</p>
 			<p v-show="friseur.show">Samstag: {{ friseur.Samstag}}</p>
 			<p v-show="friseur.show">Sonntag: {{ friseur.Sonntag}}</p>
-            <p v-show="friseur.show">show: {{ friseur.show }} </p>
             <hr>
         </article>
         </div>
