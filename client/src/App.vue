@@ -8,9 +8,14 @@
 		  <a class="navbar-brand"><div @click="setSuchfeld(); setHomeText();"><img src="https://raw.githubusercontent.com/xnngyn/Scissoroo/master/public/images/Scissoroo_Logo.jpg" width="100" height="100" alt=""> </div></a> <!--../Bilder/Scissoroo_Logo.jpg-->
 			<form class="form-inline">
 			</form>
-      <HomeNichtEingeloggt v-if="!eingeloggt"></HomeNichtEingeloggt>
-      <HomeEingeloggt v-else-if="eingeloggt"></HomeEingeloggt>
+      
+      
       </nav>	
+
+      <div id="hauptbody">
+        <HomeNichtEingeloggt v-if="!eingeloggt"></HomeNichtEingeloggt>
+        <HomeEingeloggt v-else-if="eingeloggt"></HomeEingeloggt>
+      </div>
 
       <footer>
 			  <div class="container-fluid padding">
