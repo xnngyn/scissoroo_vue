@@ -25,7 +25,7 @@
               <div class="row justify-content-center text-center">
                 <div id="createAcc">
                   <section class="insertuser">
-                    <form action="/users/insertuser" method="post" @submit="checkForm"> 
+                    <form @submit="addUser"> 
                       <div class="col-12">
                         <div class="row">
                           <label>Titel</label>
@@ -178,7 +178,7 @@
                       <hr />
 
                       <div class="col-12">
-                        <button type="submit" class="btn btn-primary btn-block">Registrieren</button>
+                        <button type="submit" class="btn btn-primary btn-block" @click="addUser">Registrieren</button>
                         <br />
                         <h6>Durch die Registrierung stimmst du den Nutzungsbestimmungen und der Datenschutzerklärung zu.</h6>
                       </div>
@@ -203,6 +203,7 @@ import SignIn from "./SignIn";
 import SignUp from "./SignUp";
 import MyProfile from "./MyProfile";
 import Results from "./Results";
+import PostService from "../services/PostService"
 
 export default {
   components: {
@@ -215,7 +216,17 @@ export default {
   name: "buttons",
   data() {
     return {
-      component: "HomeText"
+      component: "HomeText",
+      sex: '',
+      fname: '',
+      lname: '',
+      bdate: '',
+      strasse: '',
+      hausnr: '',
+      plz: '',
+      stadt: '',
+      email: '',
+      pass: ''
     };
   },
   methods: {
@@ -241,8 +252,23 @@ export default {
 
     checkForm: function() {
       //to do?
-    }
-  }
+    },
+    async addUser() {
+      await PostService.addUser({
+          sex: this.sex,
+          fname: this.fname,
+          lname: this.lname,
+          bdate: this.bdate,
+          strasse: this.strasse,
+          hausnr: this.hausnr,
+          plz: this.plz,
+          stadt: this.stadt,
+          email: this.email,
+          pass: this.pass,
+        })
+      }    
+  },
+  
 };
 </script>
 
