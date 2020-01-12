@@ -3,8 +3,9 @@
 
     <div class="friseure-container">
         <div class="friseur">
+            <h1>{{ this.$store.getters.ort }}</h1>
         <article v-for="friseur in friseure"
-            v-bind:key="friseur._id" @click="friseur.show = !friseur.show">
+            v-bind:key="friseur._id" @click="friseur.show = !friseur.show" v-show="checkOutput(friseur)">
         
             <h3><a  title="">{{ friseur.Name }}</a></h3>
 			<img src="" alt="" />
@@ -56,7 +57,17 @@ export default {
         async getFilter(){
             const response = await PostService.filter()
             this.friseure = response.data.friseure
+        },
+
+        checkOutput: function(friseur) {
+            if(friseur.Stadt == this.$store.getters.ort) {
+            return true;
+
         }
+
+return false;
+
+}
     }
     
 }
