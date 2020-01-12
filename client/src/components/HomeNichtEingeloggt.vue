@@ -2,7 +2,7 @@
   <div id="buttons">
     
     <!-- Button trigger modal -->
-    <button id="btnSignUp" class="btn btn-secondary mr-sm-2" data-toggle="modal" data-target="#registrieren">Registrierung</button>
+    <button id="btnSignUp" class="btn btn-secondary mr-sm-2" data-toggle="modal" data-target="#registrierung">Registrierung</button>
     
     <!--  <button class="btn btn-secondary mr-sm-2" @click="setSignUp">Registrierung</button> -->
     <button id="btnSignIn" class="btn btn-secondary" @click="setSignIn">Anmelden</button>
@@ -10,12 +10,12 @@
 
     <component v-bind:is="$store.getters.componentState"></component>
 
-    <!-- Nachfolgendes div enthält das Modal bzw. "Popup" für den Button Registrieren -->
-    <div class="modal fade" id="registrieren" tabindex="-1" role="dialog" aria-labelledby="registrierenTitle" aria-hidden="true">
+    <!-- Nachfolgendes div enthält das Modal bzw. "Popup" für den Button Registrierung -->
+    <div class="modal fade" id="registrierung" tabindex="-1" role="dialog" aria-labelledby="registrierungTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-scrollable" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="registrierenTitle">Erzähle uns von dir</h5>
+            <h5 class="modal-title" id="registrierungTitle">Erzähle uns von dir</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -178,7 +178,7 @@
                       <hr />
 
                       <div class="col-12">
-                        <button type="submit" class="btn btn-primary btn-block">Registrieren</button>
+                        <button type="submit" class="btn btn-primary btn-block" data-toggle="modal" data-target="#registrieren" data-dismiss="modal">Registrieren</button>
                         <br />
                         <h6>Durch die Registrierung stimmst du den Nutzungsbestimmungen und der Datenschutzerklärung zu.</h6>
                       </div>
@@ -190,6 +190,30 @@
           </div>
           <div class="modal-footer justify-content-center">
             <a href="" @click="setSignIn" data-dismiss="modal">Du hast dich bereits registriert?</a>
+          </div>
+        </div>
+      </div>
+    </div> <!-- Modal Ende -->
+
+    <!-- Nachfolgendes div enthält das Modal bzw. "Popup" für den Button Registrieren -->
+    <div class="modal fade" id="registrieren" tabindex="-1" role="dialog" aria-labelledby="registrierenTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="registrierenTitle">Bestätigung</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid padding">
+              <div class="row justify-content-center text-center">
+                <p>Die Registrierung war erfolgreich!</p>
+              </div>
+            </div>    
+          </div>
+          <div class="modal-footer justify-content-center">
+            <a href="" @click="setSignIn" data-dismiss="modal">Zur Anmeldung</a>
           </div>
         </div>
       </div>
