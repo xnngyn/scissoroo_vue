@@ -12,7 +12,7 @@
 import MyProfile from "./MyProfile";
 import Suchfeld from "./Suchfeld";
 import Results from "./Results";
-
+import DetailsAnsicht from "./DetailsAnsicht";
 
 
 export default {
@@ -20,7 +20,8 @@ export default {
     components: {
         'MyProfile': MyProfile,
         'Suchfeld': Suchfeld,
-        'Results': Results
+        'Results': Results,
+        'DetailsAnsicht': DetailsAnsicht
         
     },
     name: 'eingeloggt',
