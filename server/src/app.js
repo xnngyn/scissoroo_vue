@@ -101,7 +101,7 @@ app.post('/login', (req, res) =>{
                     message: 'Login not successfull!'
                 })
             } else {
-                //req.session.userId = user._id;
+                req.session.userId = user._id;
                 res.send({
                     "success": true,
                     message: 'Login successfull!'
