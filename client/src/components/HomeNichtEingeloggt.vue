@@ -25,7 +25,7 @@
               <div class="row justify-content-center text-center">
                 <div id="createAcc">
                   <section class="insertuser">
-                    <form v-on:submit.prevent="addUser"> 
+                    <form @submit.prevent="addUser"> 
                       <div class="col-12">
                         <div class="row">
                           <label>Titel</label>
@@ -249,6 +249,18 @@ export default {
         document.getElementById("btnSignIn").disabled = false;
       }
     },
+    resetform: function() {
+      this.sex = '',
+      this.fname= '',
+      this.lname= '',
+      this.bdate= '',
+      this.strasse= '',
+      this.hausnr= '',
+      this.plz= '',
+      this.stadt= '',
+      this.email= '',
+      this.pass= ''
+    },
 
     checkForm: function() {
       //to do?
@@ -265,8 +277,12 @@ export default {
           stadt: this.stadt,
           email: this.email,
           pass: this.pass,
+        }).then((res)=>{
+            //hier kommt die Registrierungsbestätigung
+            this.resetform;
+
         })
-        //hier kommt die Registrierungsbestätigung
+        
       }    
   },
   
