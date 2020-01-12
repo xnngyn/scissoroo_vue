@@ -92,6 +92,7 @@ export default {
 			passlogin: this.passlogin
 		}).then(res =>{
 			console.log("Login erfolgreich")
+			this.$store.state.eingeloggt = true
 			//Navigiere zu HomeEingeloggt
 		}).catch(err => {
 			console.log("Login nicht erfolgreich")
