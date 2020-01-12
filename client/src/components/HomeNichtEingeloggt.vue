@@ -178,7 +178,7 @@
                       <hr />
 
                       <div class="col-12">
-                        <button type="submit" class="btn btn-primary btn-block">Registrieren</button>
+                        <button type="submit" data-dismiss="modal" class="btn btn-primary btn-block">Registrieren</button>
                         <br />
                         <h6>Durch die Registrierung stimmst du den Nutzungsbestimmungen und der Datenschutzerklärung zu.</h6>
                       </div>
@@ -277,6 +277,7 @@ export default {
             this.stadt= '',
             this.email= '',
             this.pass= ''
+            //start neue Modal
             
 
         })
