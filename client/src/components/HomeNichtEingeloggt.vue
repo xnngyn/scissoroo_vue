@@ -307,6 +307,8 @@ export default {
             $('#erfolgreg').modal('show');
             
 
+        }).catch((err) => {
+            console.log(err)
         })
         
       }    
