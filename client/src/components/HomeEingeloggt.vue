@@ -44,6 +44,8 @@ export default {
   },
   methods: {
 
+    //Session Authentication 
+
     setMyProfile: function() {
       this.$store.state.componentStateEingeloggt = "MyProfile";
     },
