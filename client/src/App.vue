@@ -20,7 +20,7 @@
       
 
       <div class="footer">
-        © 2020 Copyright: <a href="http://localhost:8080/">Scissoroo</a>
+        © 2020 Copyright: <a class="link" href="http://localhost:8080/">Scissoroo</a>
       </div>
   
    
@@ -94,6 +94,10 @@ body {
    background-color: rgb(68, 24, 24);
    color: rgb(158, 19, 19);
    text-align: center;
+}
+
+.link {
+  color: rgb(187, 20, 20);
 }
 
 </style>
