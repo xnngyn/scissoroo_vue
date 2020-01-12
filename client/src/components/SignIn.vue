@@ -45,6 +45,29 @@
 					</form>
 				    </section>
 			    </div>
+								<!-- Nachfolgendes div enthält das Modal bzw. "Popup" für den Button Registrieren -->
+				<div class="modal fade" id="badlogin" tabindex="-1" role="dialog" aria-labelledby="badlogin" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-scrollable" role="document">
+					<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="badlogin">Login fehlgeschlagen</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="container-fluid padding">
+						<div class="row justify-content-center text-center">
+							<p>Eingegebene Email oder Passwort ist falsch</p>
+						</div>
+						</div>    
+					</div>
+					<div class="modal-footer justify-content-center">
+						<a href="" @click="setSignIn" data-dismiss="modal">Zur Anmeldung</a>
+					</div>
+					</div>
+				</div>
+				</div> <!-- Modal Ende -->
             </div>    
         </div>
     </div>
@@ -52,6 +75,7 @@
 
 <script>
 import PostService from "../services/PostService"
+import SignIn from "./SignIn"
 
 export default {
 	name: 'Login',
@@ -70,8 +94,14 @@ export default {
 			console.log("Login erfolgreich")
 		}).catch(err => {
 			console.log("Login nicht erfolgreich")
+			this.emaillogin= '',
+			this.passlogin='',
+			$('#badlogin').modal('show');
 		})
-	  }
+	  },
+	  setSignIn: function() {
+	  this.$store.state.componentState = "SignIn";
+	  },
 	}
 }
 </script>
