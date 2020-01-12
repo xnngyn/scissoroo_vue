@@ -92,6 +92,7 @@ export default {
 			passlogin: this.passlogin
 		}).then(res =>{
 			console.log("Login erfolgreich")
+			//Navigiere zu HomeEingeloggt
 		}).catch(err => {
 			console.log("Login nicht erfolgreich")
 			this.emaillogin= '',
