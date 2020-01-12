@@ -7,7 +7,8 @@ export const store = new Vuex.Store({
 
     state: {
         componentState: 'HomeText',
-        componentStateEingeloggt: 'Suchfeld'
+        componentStateEingeloggt: 'Suchfeld',
+        eingeloggt: false
     },
 
     mutations: {
@@ -17,12 +18,18 @@ export const store = new Vuex.Store({
 
             changeComponentEingeloggt(state, payload) {
                 state.componentStateEingeloggt = componentStateEingeloggt
+            },
+
+            changeEingeloggt(state, payload) {
+                state.eingeloggt = eingeloggt
             }
+
 
     },
 
     getters: {
       componentState:  state => state.componentState,
-      componentStateEingeloggt: state => state.componentStateEingeloggt
+      componentStateEingeloggt: state => state.componentStateEingeloggt,
+      eingeloggt: state => state.eingeloggt
     }
 })

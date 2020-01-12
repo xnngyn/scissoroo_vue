@@ -13,8 +13,8 @@
       </nav>	
 
       <div id="hauptbody"> 
-        <HomeNichtEingeloggt v-if="!eingeloggt"></HomeNichtEingeloggt>
-        <HomeEingeloggt v-else-if="eingeloggt"></HomeEingeloggt>
+        <HomeNichtEingeloggt v-if="!this.$store.state.eingeloggt"></HomeNichtEingeloggt>
+        <HomeEingeloggt v-else-if="this.$store.state.eingeloggt"></HomeEingeloggt>
     </div>   
 
       <footer>
