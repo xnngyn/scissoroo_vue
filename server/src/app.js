@@ -75,6 +75,28 @@ app.post('/register', (req, res) => {
         });
 })
 
+app.post('/login', (req, res) =>{
+    if(req.body.emaillogin && req.body.passlogin){
+        User.authenticate(req.body.emaillogin, req.body.passlogin, function(error, user){
+            if(error || !user){
+                var err = new Error('Falsche Email oder Passwort');
+                console.log(err)
+                err.status = 401;
+                res.send({
+                    success: false,
+                    message: 'Login not successfull!'
+                })
+            } else {
+                req.session.userId = user._id;
+                res.send({
+                    success: true,
+                    message: 'Login successfull!'
+                })
+            }
+        })
+    }
+})
+
 // Mongo DB Database
 var mongoose = require('mongoose');
 var mongoDB = 'mongodb+srv://scissoroo_admin:scissoroo_admin@scissoroodb-vjd2z.mongodb.net/scissoroo?retryWrites=true&w=majority';
