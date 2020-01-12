@@ -5,11 +5,24 @@ const morgan = require('morgan')
 var bcrypt = require('bcrypt')
 var User = require('../models/user')
 var Provider = require('../models/provider')
+var session = require('express-session')
+var MongoStore = require('connect-mongodb-session')(session);
 
 const app = express()
 app.use(morgan('combined'))
 app.use(bodyParser.json())
 app.use(cors())
+
+//use sessions for tracking logins
+app.use(session({
+    secret: 'work hard',
+    resave: true,
+    saveUninitialized: false,
+    store: new MongoStore({
+        uri: 'mongodb+srv://scissoroo_admin:scissoroo_admin@scissoroodb-vjd2z.mongodb.net/scissoroo?retryWrites=true&w=majority',
+        collection: 'mySessions'
+    })
+  }));
 
 app.get('/', (req, res) =>{
     res.send({
