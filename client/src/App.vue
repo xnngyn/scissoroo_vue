@@ -4,8 +4,8 @@
  
 
     <nav class="navbar navbar-light bg-light">
-		  <a class="navbar-brand"><div @click="setSuchfeld(); setHomeText();"><img src="https://raw.githubusercontent.com/xnngyn/Scissoroo/master/public/images/Scissoroo_Logo.jpg" width="100" height="100" alt=""> </div></a> <!--../Bilder/Scissoroo_Logo.jpg-->
-			<button id="home" class="btn btn-secondary" @click="setSuchfeld(); setHomeText();">Home</button>
+		  <a class="navbar-brand"><div @click="setSuchfeld(); setHomeText();"><img src="https://raw.githubusercontent.com/xnngyn/Scissoroo/master/public/images/Scissoroo_Logo.jpg" width="100" height="100" alt=""> </div></a>
+			<button id="home" class="btn btn-secondary mr-auto mt-2 mt-lg-0" @click="setSuchfeld(); setHomeText();">Home</button>
       <ButtonsNichtEingeloggt v-if="!this.$store.state.eingeloggt"></ButtonsNichtEingeloggt>
       <ButtonsEingeloggt v-else-if="this.$store.state.eingeloggt"></ButtonsEingeloggt>
       
