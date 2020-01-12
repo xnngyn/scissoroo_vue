@@ -13,10 +13,6 @@
 			<p>{{ friseur.Adresse }}</p>
 			<p>{{ friseur.Email}}</p>
 			<p>{{ friseur.Telefon}}</p>
-			<p>{{ friseur.Website}}</p>
-			<p>Anzahl Mitarbeiter: {{ friseur.Mitarbeiter}}</p>
-			<p>Anzahl Parkplätze: {{ friseur.Parkplaetze}}</p>
-			<p>Öffnungszeiten</p>
 			<p>Montag: {{ friseur.Montag}}</p>
 			<p>Dienstag: {{ friseur.Dienstag}}</p>
 			<p>Mittwoch: {{ friseur.Mittwoch}}</p>
@@ -24,6 +20,7 @@
 			<p>Freitag: {{ friseur.Freitag}}</p>
 			<p>Samstag: {{ friseur.Samstag}}</p>
 			<p>Sonntag: {{ friseur.Sonntag}}</p>
+            <p>show: {{ friseur.show }} </p>
             <hr>
         </article>
         </div>
@@ -41,18 +38,12 @@ import PostService from "../services/PostService"
 
 export default {
 
-   components: {
-
-       
-
-   },
+   
     name: 'results', 
     data() {
         return {
-            friseure: [
-//{id:1, name: 'Asiafriseur', adresse: 'AAASIEEEN', email: 'asd', telefon: '0711/321654987', website: 'asd', parkplaetze: 2, montag: '10-12', dienstag: '', mittwoch: '', donnerstag: '', freitag: '', samstag: '', sonntag: ''},
-//{id:2, name: 'Ostfriseur', adresse: 'slaveländle', email: 'asd', telefon: '0711/321654987', website: 'asd', parkplaetze: 2, montag: '10-12', dienstag: '', mittwoch: '', donnerstag: '', freitag: '', samstag: '', sonntag: ''}
-            ]
+            friseure: [],
+            
 
         }
     },
