@@ -2,7 +2,7 @@
     <div id="Anfangstext" class="container-fluid padding text-white">
     
     <div id="text" class="row justify-content-center text-center ">
-        <div class="col-md-10 col-sm-12" >
+        <div class="bg-transparent col-md-10 col-sm-12" >
         <h1 id="Überschrifti">Hallo und herzlich Willkommen!</h1>
 
             <p class="lead">Dies ist das Ergebnis eines Studienprojekts von 7 Wirtschaftsinformatik-Studierenden der Hochschule für Technik Stuttgart.</p>
