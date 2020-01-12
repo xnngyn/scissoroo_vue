@@ -1,10 +1,9 @@
 <template>
 <div id="list" class="container">
-    <h1>Friseure in deiner Umgebung Blyat</h1>
     <hr>
     <div class="friseure-container">
         <div class="friseur">
-        
+        <h1>{{ $store.getters.ort }}</h1>
         <article v-for="friseur in friseure"
             v-bind:key="friseur._id" @click="friseur.show = !friseur.show">
         
