@@ -47,13 +47,16 @@
 							<span class="review-no">41 Bewertungen</span>
 						</div>
 						<p class="product-description">Adresse, Telefon, Email, website</p>
-						<h4 class="price">haarschnitt: <span>20€</span></h4>
+						<h6 class="price">haarschnitt: <span>20€</span></h6>
+                        <h6 class="price">haarschnitt: <span>20€</span></h6>
+                        <h6 class="price">haarschnitt: <span>20€</span></h6>
+                        <h6 class="price">haarschnitt: <span>20€</span></h6>
 						
 						<h5 class="colors" >Mitarbeiter:
 							<!--<span class="size" data-toggle="tooltip" title="small">7</span>-->
                             <span>7</span>
 						</h5>
-                        <h5 class="colors">Parkplätze:
+                        <h5 v-if="fris" class="colors">Parkplätze:
 							<!--<span class="size" data-toggle="tooltip" title="small">7</span>-->
                             <span>0</span>
 						</h5>
