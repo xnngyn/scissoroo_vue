@@ -14,6 +14,8 @@
 	
 	<div class="container">
 		<div class="card">
+      <a href="#" class="previous">&laquo; Zurück zur Suche</a>
+      
 			<div class="container-fliud">
 				<div class="wrapper row">
 					<div class="preview col-md-6">
@@ -85,12 +87,29 @@ export default {
 <style scoped>
     
 /*****************globals*************/
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
 body {
   font-family: 'open sans';
   overflow-x: hidden; }
 
 img {
   max-width: 100%; }
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+  width: 175px;
+}
 
 .preview {
   display: -webkit-box;
