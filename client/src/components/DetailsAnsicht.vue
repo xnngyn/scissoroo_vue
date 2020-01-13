@@ -14,7 +14,7 @@
 	
 	<div class="container">
 		<div class="card">
-      <a href="#" class="previous">&laquo; Zurück zur Suche</a>
+      <a @click="setResults" href="#" class="previous">&laquo; Zurück zur Suche</a>
       
 			<div class="container-fliud">
 				<div class="wrapper row">
@@ -79,8 +79,23 @@
 </template>
 
 <script>
+
+import Results from "./Results";
+
 export default {
-    
+
+    components: {
+        
+        'Results': Results
+
+    },
+
+    methods: {
+
+    setResults: function() {
+        this.$store.state.componentStateEingeloggt = 'Results';
+      }
+    }
 }
 </script>
 
