@@ -16,6 +16,8 @@
 <input type="checkbox" id="dFaerben" v-model="damenFaerben">
 <label for="checkbox"> Damen Färben </label>
 
+ <a @click="setResults" href="#" class="previous" id="suchButton">&laquo; Zurück zur Suche</a>
+
         <article v-for="friseur in friseure"
             v-bind:key="friseur._id" @click="friseur.show = !friseur.show" v-show="checkOutput(friseur) && checkAngebot(friseur)">
         
@@ -119,7 +121,12 @@ setidSpeicher: function(friseur){
       this.$store.state.idSpeicher = friseur._id;
 
 
-    }
+    },
+
+    setResults: function() {
+        this.$store.state.componentStateEingeloggt = 'Suchfeld';
+      },
+    
     
     }
     }
@@ -131,6 +138,13 @@ setidSpeicher: function(friseur){
     background-color: hsla(0,0%,50%,0.5);
 }
 
+#suchButton{
+
+   text-align: right;
+   color: rgb(3, 3, 3);
+   font-weight: bold;
+    float: right;
+}
 
 article {
     text-align: center;
