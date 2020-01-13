@@ -6,6 +6,8 @@
       </div>
       <div id="parameter" class="col-xs-12 col-sm-4 col-md-3 text-left">
         <div>
+            <input type="text" placeholder="Suche.." v-model="$store.state.ort"/><br/>
+
           <input type="checkbox" id="mSchnitt" v-model="maennerSchnitt" />
           <label for="checkbox">Männerschnitt</label>
           <br />
@@ -22,7 +24,7 @@
           <label for="checkbox">Damen Färben</label>
           <br />
 
-          <label>
+          <!--<label>
             Sortiert nach
             <select>
               <option value="?">Bewertung</option>
@@ -30,7 +32,7 @@
               <option value="?">Preis absteigend</option>
               <option value="?">Entfernung</option>
             </select>
-          </label>
+          </label>-->
         </div>
       </div>
 

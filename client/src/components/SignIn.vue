@@ -31,7 +31,7 @@
 													<input class="form-control" id="email" type="email" name="email" placeholder="E-Mail-Adresse eingeben" required/><br/>
 												</div>
 												<div class="col-12">
-													<button type="submit" class="btn btn-primary btn-block">Bestätigen</button>
+													<button type="submit" class="btn btn-primary btn-block" data-dismiss="modal">Bestätigen</button>
 												</div>
 											</form>
 										</section>
@@ -45,7 +45,7 @@
 					</form>
 				    </section>
 			    </div>
-								<!-- Nachfolgendes div enthält das Modal bzw. "Popup" für den Button Registrieren -->
+								<!-- Nachfolgendes div enthält das Modal bzw. "Popup" für einen fehlerhaften Login -->
 				<div class="modal fade" id="badlogin" tabindex="-1" role="dialog" aria-labelledby="badlogin" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-scrollable" role="document">
 					<div class="modal-content">
