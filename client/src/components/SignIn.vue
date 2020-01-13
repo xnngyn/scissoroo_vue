@@ -1,18 +1,18 @@
 <template>
     <div>
-        <div class="container-fluid padding border bg-light">
+        <div class="container-fluid padding bg-transparent">
 		
-            <div class="row justify-content-center text-center">
-			    <div>
+            <div class="row justify-content-end text-center padding">
+			    <div class="padding">
 				    <section class="loginuser">
-                    <h5>Anmelden</h5>
+                    <h3></h3>
 
 					<form @submit.prevent="login">
 						<input id="emaillogin" v-model="emaillogin" type="email" name="emaillogin" placeholder="E-Mail" required><br/>
 						<input id="passlogin" v-model="passlogin" type="password" name="passlogin" placeholder="Passwort" required><br/>
 						<button class="btn btn-primary btn-block">Anmelden</button>
-						<a href="" data-toggle="modal" data-target="#registrierung">Neu hier?</a><br/> <!-- Definiert in HomeNichtEingeloggt -->
-						<a href="" data-toggle="modal" data-target="#pwVergessen">Passwort vergessen?</a>
+						<a id="link" class="bg-light" href="" data-toggle="modal" data-target="#registrierung">Neu hier?</a><br/> <!-- Definiert in HomeNichtEingeloggt -->
+						<a id="link" class="bg-light" href="" data-toggle="modal" data-target="#pwVergessen">Passwort vergessen?</a>
 						
 						<!-- Nachfolgendes div enthält das Modal bzw. "Popup" für den Link Passwort vergessen -->
 						<div class="modal fade" id="pwVergessen" tabindex="-1" role="dialog" aria-labelledby="pwVergessenLabel" aria-hidden="true">
@@ -109,5 +109,10 @@ export default {
 </script>
 
 <style>
+
+#link {
+	color: rgb(3, 3, 3);
+  font-weight: bold;
+}
 
 </style>

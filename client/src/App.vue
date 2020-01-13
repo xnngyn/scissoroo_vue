@@ -4,7 +4,7 @@
  
 
     <nav class="navbar navbar-light bg-light">
-		  <a class="navbar-brand"><div @click="setSuchfeld(); setHomeText();"><img src="https://raw.githubusercontent.com/xnngyn/Scissoroo/master/public/images/Scissoroo_Logo.jpg" width="100" height="100" alt=""> </div></a>
+		  <a id="brand" class="navbar-brand"><div @click="setSuchfeld(); setHomeText();"><img src="https://raw.githubusercontent.com/xnngyn/Scissoroo/master/public/images/Scissoroo_Logo.jpg" width="100" height="100" alt=""> </div></a>
 			<button id="home" class="btn btn-light btn-lg ml-auto mr-2" @click="setSuchfeld(); setHomeText();">Home</button>
       <ButtonsNichtEingeloggt v-if="!this.$store.state.eingeloggt"></ButtonsNichtEingeloggt>
       <ButtonsEingeloggt v-else-if="this.$store.state.eingeloggt"></ButtonsEingeloggt>
@@ -100,4 +100,7 @@ body {
   color: rgb(187, 20, 20);
 }
 
+#brand {
+    cursor: pointer;
+}
 </style>
