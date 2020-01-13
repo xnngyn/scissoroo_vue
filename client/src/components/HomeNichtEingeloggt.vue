@@ -12,19 +12,14 @@
 import HomeText from "./HomeText";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
-import MyProfile from "./MyProfile";
-import Results from "./Results";
 import PostService from "../services/PostService";
-import DetailsAnsicht from "./DetailsAnsicht";
 
 export default {
   components: {
     'HomeText': HomeText,
     'SignIn': SignIn,
     'SignUp': SignUp,
-    'MyProfile': MyProfile,
-    'Results': Results,
-    'DetailsAnsicht': DetailsAnsicht
+   
   },
   name: "buttons",
   data() {
@@ -54,20 +49,9 @@ export default {
       //document.getElementById("btnSignIn").pressed = false;     not working :-(
     },
 
-    setResults: function() {
-      this.$store.state.componentState = "Results";
+  
 
-      //Reaktivierung des Anmelden-Buttons
-      if(document.getElementById("btnSignIn").disabled == true){
-        document.getElementById("btnSignIn").disabled = false;
-      }
-    },
-
-    setDetailsansicht: function(){
-
-      this.$store.state.componentState = "DetailsAnsicht";
-    },
-
+  
 
     checkForm: function() {
       //to do?
