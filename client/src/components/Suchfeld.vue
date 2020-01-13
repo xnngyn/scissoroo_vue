@@ -10,7 +10,7 @@
       <div id="suche" class="col-6">
         <!-- The form -->
         <form class="example">
-          <input type="text" placeholder="Search.." v-model="$store.state.ort"/>
+          <input type="text" placeholder="Suche.." v-model="$store.state.ort"/>
           <button type="submit" @click="setResults">
             <i class="fa fa-search"></i>
           </button>
