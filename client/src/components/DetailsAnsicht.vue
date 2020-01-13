@@ -35,7 +35,7 @@
 						
 					</div>
 					<div class="details col-md-6">
-						<h3 class="product-title">Friseursalon Name</h3>
+						<h3 class="product-title">{{this.$store.getters.idSpeicher}}</h3>
 						<div class="rating">
 							<div class="stars">
 								<span class="fa fa-star checked"></span>

@@ -3,12 +3,11 @@
 
     <div class="friseure-container">
         <div class="friseur">
-            <h1>{{ this.$store.getters.idSpeicher }}</h1>
         <article v-for="friseur in friseure"
             v-bind:key="friseur._id" @click="friseur.show = !friseur.show" v-show="checkOutput(friseur)">
         
            
-            <h3 @click="setDetailansicht"><a  title="">{{ friseur.Name }}</a></h3>
+            <h3 @click="setDetailansicht(); setidSpeicher(friseur);"><a  title="">{{ friseur.Name }}</a></h3>
 			<img src="" alt="" />
 			<p>{{ friseur.Adresse }}</p>
 			<p>{{ friseur.Telefon}}</p>
@@ -70,9 +69,9 @@ setDetailansicht: function(){
 
     },
 
-setidSpeicher: function(){
+setidSpeicher: function(friseur){
   
-      this.$store.state.idSpeicher = friseur.FriseurNr;
+      this.$store.state.idSpeicher = friseur._id;
 
 
     }
