@@ -3,10 +3,12 @@
 
     <div class="friseure-container">
         <div class="friseur">
+            <h1>{{ this.$store.getters.idSpeicher }}</h1>
         <article v-for="friseur in friseure"
             v-bind:key="friseur._id" @click="friseur.show = !friseur.show" v-show="checkOutput(friseur)">
         
-            <h3><a  title="">{{ friseur.Name }}</a></h3>
+           
+            <h3 @click="setDetailansicht"><a  title="">{{ friseur.Name }}</a></h3>
 			<img src="" alt="" />
 			<p>{{ friseur.Adresse }}</p>
 			<p>{{ friseur.Telefon}}</p>
@@ -56,12 +58,27 @@ export default {
 
         }
 
+         
+
 return false;
 
-}
+},
+
+setDetailansicht: function(){
+  
+      this.$store.state.componentStateEingeloggt = 'DetailsAnsicht';
+
+    },
+
+setidSpeicher: function(){
+  
+      this.$store.state.idSpeicher = friseur.FriseurNr;
+
+
     }
     
-}
+    }
+    }
 </script>
 
 <style>
