@@ -8,8 +8,8 @@
                     <h5>Anmelden</h5>
 
 					<form @submit.prevent="login">
-						<input id="emaillogin" v-model="emaillogin" type="email" name="emaillogin" placeholder="E-Mail"><br/>
-						<input id="passlogin" v-model="passlogin" type="password" name="passlogin" placeholder="Passwort"><br/>
+						<input id="emaillogin" v-model="emaillogin" type="email" name="emaillogin" placeholder="E-Mail" required><br/>
+						<input id="passlogin" v-model="passlogin" type="password" name="passlogin" placeholder="Passwort" required><br/>
 						<button class="btn btn-primary btn-block">Anmelden</button>
 						<a href="" data-toggle="modal" data-target="#registrierung">Neu hier?</a><br/> <!-- Definiert in HomeNichtEingeloggt -->
 						<a href="" data-toggle="modal" data-target="#pwVergessen">Passwort vergessen?</a>
