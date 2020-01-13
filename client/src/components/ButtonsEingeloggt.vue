@@ -1,6 +1,6 @@
 <template>
     <div id="eingeloggt">
-		<button id="btnMyProfil" class="btn btn-light btn-lg mr-2" @click="setMyProfile">Mein Profil</button>
+		<button id="btnMyProfil" class="btn btn-light btn-lg ml-2 mr-2" @click="setMyProfile">Mein Profil</button>
 		<button id="btnLogout" @click="logout" class="btn btn-light btn-lg">Ausloggen</button>
     </div>
 
