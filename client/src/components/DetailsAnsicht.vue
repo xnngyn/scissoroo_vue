@@ -44,15 +44,11 @@
 								<span class="fa fa-star"></span>
 								<span class="fa fa-star"></span>
 							</div>
-							<span class="review-no">41 reviews</span>
+							<span class="review-no">41 Bewertungen</span>
 						</div>
 						<p class="product-description">Adresse, Telefon, Email, website</p>
 						<h4 class="price">current price: <span>$180</span></h4>
-						<p class="vote"><strong>1</strong> Platz <strong>(87 votes)</strong></p>
-						<h5 class="sizes">Öffnungszeiten:
-							<!--<span class="size" data-toggle="tooltip" title="small">08:00 - 20:00</span>-->
-                            <span>08:00 - 20:00</span>
-						</h5>
+						
 						<h5 class="colors">Mitarbeiter:
 							<!--<span class="size" data-toggle="tooltip" title="small">7</span>-->
                             <span>7</span>
@@ -60,6 +56,10 @@
                         <h5 class="colors">Parkplätze:
 							<!--<span class="size" data-toggle="tooltip" title="small">7</span>-->
                             <span>0</span>
+						</h5>
+                        <h5 class="sizes">Öffnungszeiten:
+							<!--<span class="size" data-toggle="tooltip" title="small">08:00 - 20:00</span>-->
+                            <span>08:00 - 20:00</span>
 						</h5>
 						<div class="action">
 							<button class="add-to-cart btn btn-default" type="button">Termin buchen</button>
