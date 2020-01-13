@@ -14,7 +14,8 @@
 	
 	<div class="container">
 		<div class="card">
-      <a @click="setResults" href="#" class="previous">&laquo; Zurück zur Suche</a>
+      <button type="button" class="close ml-auto mr-2" @click="setResults" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <a @click="setResults" href="#" class="previous">&laquo; Zurück</a>
       
 			<div class="container-fliud">
 				<div class="wrapper row">
@@ -139,7 +140,6 @@ img {
   max-width: 100%; }
 
 .previous {
-  background-color: #f1f1f1;
   color: black;
   width: 175px;
 }
