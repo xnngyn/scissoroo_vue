@@ -3,10 +3,10 @@
   <div id="buttons">
   
     <!-- Button trigger modal -->
-    <button id="btnSignUp" class="btn btn-secondary mr-sm-2" data-toggle="modal" data-target="#registrierung">Registrieren</button> 
+    <button id="btnSignUp" class="btn btn-light btn-lg ml-auto mr-2" data-toggle="modal" data-target="#registrierung">Registrieren</button> 
     
     <!--  <button class="btn btn-secondary mr-sm-2" @click="setSignUp">Registrierung</button> -->
-    <button id="btnSignIn" class="btn btn-secondary" @click="setSignIn">Anmelden</button> 
+    <button id="btnSignIn" class="btn btn-light btn-lg" @click="setSignIn">Anmelden</button> 
 
     
   </div>
