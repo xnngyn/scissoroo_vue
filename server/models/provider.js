@@ -56,6 +56,18 @@ var ProviderSchema = new mongoose.Schema({
     Sonntag:{
         type    : String
     },
+    mancut:{
+        type    : Number
+    },
+    manwash:{
+        type    : Number
+    },
+    womancut:{
+        type    : Number
+    },
+    womancol:{
+        type    : Number
+    },
 }, { collection: 'friseure'});
 
 //fetch data
