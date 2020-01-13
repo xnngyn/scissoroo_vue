@@ -9,8 +9,8 @@
     <div class="row justify-content-center text-center">
       <div id="suche" class="col-6">
         <!-- The form -->
-        <form class="example" action="action_page.php">
-          <input type="text" placeholder="Search.." name="search" v-model="$store.state.ort"/>
+        <form class="example">
+          <input type="text" placeholder="Search.." v-model="$store.state.ort"/>
           <button type="submit" @click="setResults">
             <i class="fa fa-search"></i>
           </button>
