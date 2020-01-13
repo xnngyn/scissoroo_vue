@@ -66,7 +66,7 @@ export default {
         },
 
         checkOutput: function(friseur) {
-            var input = new RegExp(this.$store.getters.ort)
+            var input = new RegExp(this.$store.getters.ort, 'i')
             var adresse = friseur.Adresse
             var name = friseur.Name
             if(input.test(adresse) || input.test(name)) {
