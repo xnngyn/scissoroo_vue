@@ -47,9 +47,9 @@
 							<span class="review-no">41 Bewertungen</span>
 						</div>
 						<p class="product-description">Adresse, Telefon, Email, website</p>
-						<h4 class="price">current price: <span>$180</span></h4>
+						<h4 class="price">haarschnitt: <span>20€</span></h4>
 						
-						<h5 class="colors">Mitarbeiter:
+						<h5 class="colors" >Mitarbeiter:
 							<!--<span class="size" data-toggle="tooltip" title="small">7</span>-->
                             <span>7</span>
 						</h5>
@@ -57,10 +57,10 @@
 							<!--<span class="size" data-toggle="tooltip" title="small">7</span>-->
                             <span>0</span>
 						</h5>
-                        <h5 class="sizes">Öffnungszeiten:
+                        <h6>Öffnungszeiten:
 							<!--<span class="size" data-toggle="tooltip" title="small">08:00 - 20:00</span>-->
                             <span>08:00 - 20:00</span>
-						</h5>
+						</h6>
 						<div class="action">
 							<button class="add-to-cart btn btn-default" type="button">Termin buchen</button>
 						</div>
