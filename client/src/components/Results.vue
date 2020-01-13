@@ -4,7 +4,7 @@
       <div class="col-12">
         <a @click="setSearch" href="#" class="previous" id="suchButton">&laquo; Zurück zur Suche</a>
       </div>
-      <div id="parameter" class="col-xs-12 col-sm-4 col-md-3 text-left">
+      <div class="col-xs-12 col-sm-4 col-md-3 text-left">
         <div>
             <input type="text" placeholder="Suche.." v-model="$store.state.ort"/><br/>
 
@@ -45,7 +45,7 @@
               @click="friseur.show = !friseur.show"
               v-show="checkOutput(friseur) && checkAngebot(friseur)"
             >
-              <h3 @click="setDetailansicht(); setidSpeicher(friseur);">
+              <h3 id="cursor" @click="setDetailansicht(); setidSpeicher(friseur);">
                 <a title>{{ friseur.Name }}</a>
               </h3>
               <img src alt />
@@ -189,5 +189,13 @@ form.example::after {
   content: "";
   clear: both;
   display: table;
+}
+
+article {
+    cursor: ns-resize;
+}
+
+#cursor {
+    cursor: pointer;
 }
 </style>
