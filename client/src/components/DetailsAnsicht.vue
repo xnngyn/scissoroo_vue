@@ -103,6 +103,9 @@ export default {
           id: this.$store.getters.idSpeicher
         })
         this.friseur = resp.data.friseure
+      },
+      setResults: function() {
+        this.$store.state.componentStateEingeloggt = 'Results';
       }
     },
 
@@ -110,13 +113,6 @@ export default {
         
         'Results': Results
 
-    },
-
-    methods: {
-
-    setResults: function() {
-        this.$store.state.componentStateEingeloggt = 'Results';
-      }
     }
 }
 </script>
