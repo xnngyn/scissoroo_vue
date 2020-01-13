@@ -1,12 +1,12 @@
 <template>
 <div>
   <div id="buttons">
-    
+  
     <!-- Button trigger modal -->
-    <button id="btnSignUp" class="btn btn-secondary mr-sm-2" data-toggle="modal" data-target="#registrierung">Registrierung</button>
+    <button id="btnSignUp" class="btn btn-secondary mr-sm-2" data-toggle="modal" data-target="#registrierung">Registrieren</button> 
     
     <!--  <button class="btn btn-secondary mr-sm-2" @click="setSignUp">Registrierung</button> -->
-    <button id="btnSignIn" class="btn btn-secondary" @click="setSignIn">Anmelden</button>
+    <button id="btnSignIn" class="btn btn-secondary" @click="setSignIn">Anmelden</button> 
 
     
   </div>
@@ -316,8 +316,5 @@ export default {
     justify-content: center;
     height: 100vh;
 }
-
-
-
 
 </style>
