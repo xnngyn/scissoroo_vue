@@ -3,8 +3,21 @@
 
     <div class="friseure-container">
         <div class="friseur">
+
+<input type="checkbox" id="mSchnitt" v-model="maennerSchnitt">
+<label for="checkbox"> Männerschnitt </label>
+
+<input type="checkbox" id="mWaesche" v-model="männerWaesche">
+<label for="checkbox"> Männerhaarwäsche </label>
+
+<input type="checkbox" id="dSchnitt" v-model="damenSchnitt">
+<label for="checkbox"> Damenschnitt </label>
+
+<input type="checkbox" id="dFaerben" v-model="damenFaerben">
+<label for="checkbox"> Damen Färben </label>
+
         <article v-for="friseur in friseure"
-            v-bind:key="friseur._id" @click="friseur.show = !friseur.show" v-show="checkOutput(friseur)">
+            v-bind:key="friseur._id" @click="friseur.show = !friseur.show" v-show="checkOutput(friseur) && checkAngebot(friseur)">
         
            
             <h3 @click="setDetailansicht(); setidSpeicher(friseur);"><a  title="">{{ friseur.Name }}</a></h3>
@@ -34,7 +47,16 @@ export default {
     name: 'results', 
     data() {
         return {
+<<<<<<< HEAD
             friseure: []
+=======
+            friseure: [],
+            search: '',
+            maennerSchnitt: false,
+            männerWaesche: false,
+            damenSchnitt: false,
+            damenFaerben: false
+>>>>>>> 992971cf8e0fe027a168a9f58c9dc08623529521
 
         }
     },
@@ -59,6 +81,34 @@ export default {
          
 
 return false;
+
+},
+
+checkAngebot: function(friseur){
+
+if(this.maennerSchnitt == true && friseur.mancut == null){
+
+return false;
+}
+
+if(this.männerWaesche == true && friseur.manwash == null){
+
+return false;
+}
+
+if(this.damenSchnitt == true && friseur.womancut == null){
+
+return false;
+}
+
+if(this.damenFaerben == true && friseur.womancol == null){
+
+return false;
+}
+
+
+
+return true;
 
 },
 

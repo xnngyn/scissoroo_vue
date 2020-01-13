@@ -8,7 +8,7 @@
     <!--  <button class="btn btn-secondary mr-sm-2" @click="setSignUp">Registrierung</button> -->
     <button id="btnSignIn" class="btn btn-secondary" @click="setSignIn">Anmelden</button>
 
-    <button id="Detailansicht" @click="setDetailsansicht">Detailansicht</button>
+    <button id="Detailansicht" @click="setResults">Results</button>
   </div>
 
     <!-- Nachfolgendes div enthält das Modal bzw. "Popup" für den Button Registrierung -->
@@ -277,10 +277,7 @@ export default {
       }
     },
 
-     setDetailsansicht: function(){
-
-      this.$store.state.componentState = "DetailsAnsicht";
-    },
+    
 
     checkForm: function() {
       //to do?
