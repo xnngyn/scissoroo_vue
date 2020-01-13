@@ -13,15 +13,15 @@
           <br />
 
           <input type="checkbox" id="mWaesche" v-model="männerWaesche" />
-          <label for="checkbox">Männerhaarwäsche</label>
+          <label for="checkbox">Männerschnitt mit Waschen</label>
           <br />
 
           <input type="checkbox" id="dSchnitt" v-model="damenSchnitt" />
-          <label for="checkbox">Damenschnitt</label>
+          <label for="checkbox">Damenschnitt mit Waschen</label>
           <br />
 
           <input type="checkbox" id="dFaerben" v-model="damenFaerben" />
-          <label for="checkbox">Damen Färben</label>
+          <label for="checkbox">Damenschnitt mit Make Up</label>
           <br />
 
           <!--<label>
