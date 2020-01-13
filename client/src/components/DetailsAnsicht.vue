@@ -47,7 +47,7 @@
 							<span class="review-no">41 Bewertungen</span>
 						</div>
 						<p class="product-description">Adresse, Telefon, Email, website</p>
-						<h4 class="price">current price: <span>$180</span></h4>
+						<h4 class="price">haarschnitt: <span>20€</span></h4>
 						
 						<h5 class="colors">Mitarbeiter:
 							<!--<span class="size" data-toggle="tooltip" title="small">7</span>-->
