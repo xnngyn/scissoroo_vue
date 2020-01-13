@@ -10,7 +10,7 @@ export const store = new Vuex.Store({
         componentStateEingeloggt: 'Suchfeld',
         eingeloggt: false,
         ort: '',
-        idSpeicher: 0
+        idSpeicher: ''
     },
 
     mutations: {
