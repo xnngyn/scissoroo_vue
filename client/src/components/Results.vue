@@ -47,16 +47,12 @@ export default {
     name: 'results', 
     data() {
         return {
-<<<<<<< HEAD
-            friseure: []
-=======
             friseure: [],
             search: '',
             maennerSchnitt: false,
             männerWaesche: false,
             damenSchnitt: false,
             damenFaerben: false
->>>>>>> 992971cf8e0fe027a168a9f58c9dc08623529521
 
         }
     },

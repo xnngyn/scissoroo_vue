@@ -86,6 +86,7 @@
 
 <script>
 import PostService from "../services/PostService"
+import Results from "./Results";
 export default {
     name: 'Detail',
     data() {
@@ -102,10 +103,8 @@ export default {
           id: this.$store.getters.idSpeicher
         })
         this.friseur = resp.data.friseure
-
-import Results from "./Results";
-
-export default {
+      }
+    },
 
     components: {
         
