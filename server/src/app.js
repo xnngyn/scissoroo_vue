@@ -42,6 +42,21 @@ app.get('/results', (req, res) =>{
     })
 });
 
+app.get('/detail/:id', (req, res) =>{
+    Provider.findById(req.params.id, function(err, result){
+        if(err)
+            res.status(400).send({
+                message: 'Logout not successfull!'
+            })
+        res.send({
+            friseure: result,
+            "success": true,
+              message: 'Friseur found!'
+            
+        })
+    })
+});
+
 app.post('/register', (req, res) => {
     //Get Form Values
     var fname = req.body.fname;

@@ -34,8 +34,7 @@ export default {
     name: 'results', 
     data() {
         return {
-            friseure: [],
-            search: ''
+            friseure: []
 
         }
     },

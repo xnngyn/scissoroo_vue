@@ -37,7 +37,7 @@
 						
 					</div>
 					<div class="details col-md-6">
-						<h3 class="product-title">Vietkongs Friseursalon</h3>
+						<h3 class="product-title"> {{friseur.Name}} </h3>
 						<div class="rating">
 							<div class="stars">
 								<span class="fa fa-star checked"></span>
@@ -48,23 +48,29 @@
 							</div>
 							<span class="review-no">41 Bewertungen</span>
 						</div>
-						<p class="product-description">Adresse, Telefon, Email, website</p>
-						<h6 class="price">haarschnitt: <span>20€</span></h6>
-                        <h6 class="price">haarschnitt: <span>20€</span></h6>
-                        <h6 class="price">haarschnitt: <span>20€</span></h6>
-                        <h6 class="price">haarschnitt: <span>20€</span></h6>
+						<p class="product-description"> {{ friseur.Adresse }} <br> {{ friseur.Telefon }} <br> {{ friseur.Email }} <br> {{ friseur.Website}}</p>
+						<h6 class="price">Männerhaarschnitt (ohne Waschen): <span>{{ friseur.mancut }} €</span></h6>
+                        <h6 class="price">Männerhaarschnitt (mit Waschen): <span>{{ friseur.manwash }} €</span></h6>
+                        <h6 class="price">Damenhaarschnitt (mit Waschen): <span>{{ friseur.womancut }} €</span></h6>
+                        <h6 class="price">Damenhaarschnitt mit Make Up: <span>{{ friseur.womancol }} €</span></h6>
 						
-						<h5 class="colors" >Mitarbeiter:
+						<h5 class="colors" >Anzahl Mitarbeiter:
 							<!--<span class="size" data-toggle="tooltip" title="small">7</span>-->
-                            <span>7</span>
+                            <span>{{ friseur.Mitarbeiter }}</span>
 						</h5>
                         <h5 v-if="fris" class="colors">Parkplätze:
 							<!--<span class="size" data-toggle="tooltip" title="small">7</span>-->
-                            <span>0</span>
+                            <span>{{ friseur.Parkplaetze }}</span>
 						</h5>
-                        <h6>Öffnungszeiten:
+                        <h6>Öffnungszeiten:<br>
 							<!--<span class="size" data-toggle="tooltip" title="small">08:00 - 20:00</span>-->
-                            <span>08:00 - 20:00</span>
+                            <span>Montag: {{ friseur.Montag }}</span><br>
+                            <span>Dienstag: {{ friseur.Dienstag }}</span><br>
+                            <span>Mittwoch: {{ friseur.Mittwoch }}</span><br>
+                            <span>Donnerstag: {{ friseur.Donnerstag }}</span><br>
+                            <span>Freitag: {{ friseur.Freitag }}</span><br>
+                            <span>Samstag: {{ friseur.Samstag }}</span><br>
+                            <span>Sonntag: {{ friseur.Sonntag }}</span><br>
 						</h6>
 						<div class="action">
 							<button class="add-to-cart btn btn-default" type="button">Termin buchen</button>
@@ -79,8 +85,25 @@
 </template>
 
 <script>
+import PostService from "../services/PostService"
 export default {
-    
+    name: 'Detail',
+    data() {
+      return{
+        friseur: []
+      }
+    },
+    mounted(){
+      this.getDetail()
+    },
+    methods: {
+      async getDetail(){
+        const resp = await PostService.findFriseur({
+          id: this.$store.getters.idSpeicher
+        })
+        this.friseur = resp.data.friseure
+      }
+    }
 }
 </script>
 
