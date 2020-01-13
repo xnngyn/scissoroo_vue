@@ -4,8 +4,17 @@
     <div class="friseure-container">
         <div class="friseur">
 
-<input type="checkbox" id="checkbox" v-model="bartChecked">
+<input type="checkbox" id="checkbox" v-model="maennerSchnitt">
 <label for="checkbox"> Männerschnitt </label>
+
+<input type="checkbox" id="checkbox" v-model="männerWaesche">
+<label for="checkbox"> Männerhaarwäsche </label>
+
+<input type="checkbox" id="checkbox" v-model="damenSchnitt">
+<label for="checkbox"> Damenschnitt </label>
+
+<input type="checkbox" id="checkbox" v-model="damenFaerben">
+<label for="checkbox"> Damen Färben </label>
 
         <article v-for="friseur in friseure"
             v-bind:key="friseur._id" @click="friseur.show = !friseur.show" v-show="checkOutput(friseur) && checkAngebot(friseur)">
@@ -40,7 +49,10 @@ export default {
         return {
             friseure: [],
             search: '',
-            maennerSchnitt: false
+            maennerSchnitt: false,
+            männerWaesche: false,
+            damenSchnitt: false,
+            damenFaerben: false
 
         }
     },
