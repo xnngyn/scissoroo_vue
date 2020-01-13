@@ -3,8 +3,12 @@
 
     <div class="friseure-container">
         <div class="friseur">
+
+<input type="checkbox" id="checkbox" v-model="bartChecked">
+<label for="checkbox"> Männerschnitt </label>
+
         <article v-for="friseur in friseure"
-            v-bind:key="friseur._id" @click="friseur.show = !friseur.show" v-show="checkOutput(friseur)">
+            v-bind:key="friseur._id" @click="friseur.show = !friseur.show" v-show="checkOutput(friseur) && checkAngebot(friseur)">
         
            
             <h3 @click="setDetailansicht(); setidSpeicher(friseur);"><a  title="">{{ friseur.Name }}</a></h3>
@@ -35,7 +39,8 @@ export default {
     data() {
         return {
             friseure: [],
-            search: ''
+            search: '',
+            maennerSchnitt: false
 
         }
     },
@@ -60,6 +65,16 @@ export default {
          
 
 return false;
+
+},
+
+checkAngebot: function(friseur){
+
+if(this.maennerSchnitt == true && friseur.mancut == null){
+
+return false;
+}
+return true;
 
 },
 
